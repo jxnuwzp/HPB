@@ -1,0 +1,33 @@
+#slider {
+    width: 250px;
+    height: 38px;
+    padding-left: 10px;
+    border-right-color: currentColor;
+    border-right-width: medium;
+    border-right-style: none;
+    position: relative;
+}
+
+    #slider p {
+        top: 7px;
+        width: 270px;
+        text-align: center;
+        color: rgb(170, 170, 170);
+        font-size: 18px;
+        position: absolute;
+    }
+
+    #slider a {
+        top: -1px;
+        width: 37px;
+        height: 37px;
+        padding-left: 8px;
+        font-size: 20px;
+        margin-left: 2px;
+    }
+
+        #slider a span {
+            color: rgb(1, 132, 207);
+            font-size: 18px;
+            margin-left: 2px;
+        }

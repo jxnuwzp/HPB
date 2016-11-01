@@ -1,0 +1,69 @@
+.con_msg {
+	margin: 95px auto 0px; width: 800px; height: 500px;
+}
+.con_ipt {
+	position: relative;
+}
+.con_ipt .group {
+	margin: 10px auto 0px; width: 400px; height: 41px; overflow: hidden;
+}
+.con_footer span:nth-of-type(1) a {
+	color: rgb(0, 113, 176);
+}
+.con_footer span:nth-of-type(1) {
+	margin: 20px 20px 0px; color: rgb(255, 255, 255); font-size: 13px; font-weight: bold; float: right;
+}
+.con_footer div:nth-of-type(1) {
+	float: right;
+}
+.group em {
+	float: left;
+}
+.group input {
+	float: left;
+}
+.group strong {
+	float: left;
+}
+.content .group strong {
+	color: red; line-height: 41px; font-size: 13px; margin-right: 10px;
+}
+.group em {
+	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(190, 190, 190) currentColor rgb(190, 190, 190) rgb(190, 190, 190); border-image: none; width: 40px; height: 39px; margin-top: 1px;
+}
+.con_ipt div:nth-of-type(2) em {
+	background: url("/img/ipt_1.png") no-repeat center;
+}
+.con_ipt div:nth-of-type(3) em {
+	background: url("/img/ipt_0.png") no-repeat center;
+}
+.con_ipt div:nth-of-type(4) em {
+	background: url("/img/ipt_1.png") no-repeat center;
+}
+.con_ipt div:nth-of-type(5) em {
+	background: url("/img/ipt_2.png") no-repeat center;
+}
+.show-ipt div:nth-of-type(1) em {
+	background: url("/img/ipt_3.png") no-repeat center;
+}
+.show-ipt div:nth-of-type(2) em {
+	background: url("/img/ipt_4.png") no-repeat center;
+}
+.show-ipt div:nth-of-type(3) em {
+	background: url("/img/ipt_2.png") no-repeat center;
+}
+.group input {
+	padding: 12px 5px; border: 1px solid rgb(206, 206, 206); border-image: none; width: 288px; height: 39px; margin-top: 1px;
+}
+#scode {
+	background: rgb(1, 132, 207); padding: 9px 10px; border-radius: 4px; width: 130px; text-align: center; color: rgb(255, 255, 255); line-height: 1.3333; font-size: 14px; margin-top: 2px; margin-left: 14px; display: none;
+}
+.show-ipt {
+	display: none;
+}
+.show-ipt .group {
+	margin-left: 212px;
+}
+.login-btn {
+	margin-left: 211px;
+}

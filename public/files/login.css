@@ -1,0 +1,63 @@
+.con_ipt {
+	background: rgb(255, 255, 255); padding: 20px 0px; width: 795px; height: 220px; margin-top: 35px; position: relative; box-shadow: 3px -3px 10px rgba(0,0,0,0.1);
+}
+.con_ipt .group_ipt {
+	margin: 10px auto 0px; border: 1px solid rgb(206, 206, 206); border-image: none; width: 345px; height: 41px; overflow: hidden;
+}
+.con_ipt :nth-of-type(4).group_ipt {
+	border: currentColor; border-image: none;
+}
+.group_ipt em {
+	float: left;
+}
+.group_ipt input {
+	float: left;
+}
+.group_ipt em {
+	width: 40px; height: 38px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.con_ipt :nth-of-type(4).group_ipt em {
+	border-top-color: rgb(206, 206, 206); border-bottom-color: rgb(206, 206, 206); border-left-color: rgb(206, 206, 206); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid;
+}
+.con_ipt div:nth-of-type(2) em {
+	background: url("../img/ipt_0.png") no-repeat center;
+}
+.con_ipt div:nth-of-type(3) em {
+	background: url("../img/ipt_1.png") no-repeat center;
+}
+.con_ipt div:nth-of-type(4) em {
+	background: url("../img/ipt_2.png") no-repeat center;
+}
+.group_ipt input {
+	border-width: medium medium medium 1px; border-style: none none none solid; border-color: currentColor currentColor currentColor rgb(206, 206, 206); padding: 13px 8px; border-image: none; width: 288px;
+}
+.con_ipt :nth-of-type(4).group_ipt input {
+	padding: 11px 8px; border-top-color: rgb(206, 206, 206); border-right-color: rgb(206, 206, 206); border-bottom-color: rgb(206, 206, 206); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+.con_ipt div:nth-of-type(4) input {
+	width: 165px; margin-right: 10px;
+}
+.con_ipt span:nth-last-of-type(1) {
+	color: rgb(206, 206, 206); font-size: 13px; margin-left: 10px; display: inline-block;
+}
+.con_ipt span:nth-last-of-type(1) a {
+	color: rgb(0, 113, 176);
+}
+.check input {
+	top: -100px; width: 0px; height: 0px; position: relative; z-index: -99;
+}
+.con_footer span {
+	color: rgb(255, 255, 255); font-size: 13px; font-weight: bold; margin-left: 45px;
+}
+.code_img {
+	float: right;
+}
+#scode {
+	background: rgb(239, 239, 239); padding: 10px; border-radius: 2px; border: 1px solid rgb(220, 220, 220); border-image: none; width: 130px; text-align: center; color: rgb(61, 61, 61); line-height: 1.3333; font-size: 14px; margin-left: -4px; display: inline-block;
+}
+#scode:hover {
+	background: rgb(69, 191, 222); border: 1px solid rgb(124, 212, 234); border-image: none; color: rgb(255, 255, 255);
+}
+.reword-footer {
+	line-height: 50px;
+}

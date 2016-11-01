@@ -1,0 +1,250 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    float: left;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.head {
+    background: rgb(0, 113, 176);
+    padding: 2vh 0px;
+    width: 100%;
+}
+
+    .head .head_content {
+        margin: auto;
+        width: 1200px;
+        height: 5vh;
+    }
+
+        .head .head_content img {
+            height: 100%;
+        }
+
+.content {
+    background: url("/img/bg_0.jpg") 0% 0% / cover;
+    width: 100%;
+    height: 77.7vh;
+    overflow: hidden;
+    min-height: 570px;
+}
+
+.footer {
+    width: 100%;
+}
+
+    .footer .footer_top {
+        background: rgb(28, 40, 53);
+        padding: 2.5vh 0px;
+        width: 100%;
+        color: rgb(206, 206, 206);
+        font-family: "Î¢ÈíÑÅºÚ";
+        font-size: 13px;
+    }
+
+.footer_top a {
+    color: rgb(206, 206, 206);
+}
+
+.footer_top em {
+    top: 2px;
+    width: 28px;
+    height: 17px;
+    display: inline-block;
+    position: relative;
+}
+
+.footer_top li:nth-child(1) em {
+    background: url("/img/btm_0.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(2) em {
+    background: url("/img/btm_1.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(3) em {
+    background: url("/img/btm_2.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(4) em {
+    background: url("/img/btm_3.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(5) em {
+    background: url("/img/btm_4.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(6) em {
+    background: url("/img/btm_5.png") no-repeat 0px 1px;
+}
+
+.footer_top li:nth-child(6) {
+    position: relative;
+}
+
+    .footer_top li:nth-child(6) a {
+        width: 77px;
+        height: 22px;
+        margin-top: 5px;
+        float: right;
+    }
+
+        .footer_top li:nth-child(6) a img {
+            width: 100%;
+            height: 100%;
+        }
+
+.footer_top ul {
+    margin: auto;
+    width: 1100px;
+    height: 3.5vh;
+    line-height: 3.5vh;
+}
+
+.footer_top li {
+    padding: 0px 5px;
+    display: inline-block;
+}
+
+.footer .footer_bottom {
+    background: rgb(12, 32, 46);
+    padding: 1.5vh 0px;
+    width: 100%;
+    text-align: center;
+    color: rgb(90, 137, 163);
+    overflow: hidden;
+}
+
+.footer_bottom div {
+    margin: 0px auto;
+    width: 655px;
+    overflow: hidden;
+}
+
+.footer_bottom p {
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 13px;
+    margin-right: 20px;
+    float: left;
+}
+
+.content #tip {
+    background: rgba(1, 130, 204, 0.3);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    z-index: 100;
+}
+
+.con_msg {
+    margin: 150px auto 0px;
+    width: 800px;
+    height: 500px;
+}
+
+    .con_msg .con_title img {
+        width: 476px;
+        height: 48px;
+        margin-left: 150px;
+    }
+
+.con_ipt {
+    background: rgb(251, 251, 251);
+    padding: 20px 0px;
+    width: 795px;
+    margin-top: 35px;
+    min-height: 220px;
+    box-shadow: 3px -3px 10px rgba(0,0,0,0.1);
+}
+
+.con_footer {
+    background: rgba(255, 255, 255, 0.2);
+    width: 795px;
+    height: 50px;
+}
+
+.check {
+    left: 20px;
+    top: 18px;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    position: relative;
+}
+
+    .check input {
+        top: -100px;
+        width: 0px;
+        height: 0px;
+        position: relative;
+        z-index: -99;
+    }
+
+    .check img {
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+.con_footer span {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 45px;
+}
+
+    .con_footer span a {
+        color: rgb(0, 113, 176);
+    }
+
+.login-btn {
+    background: rgb(1, 132, 207);
+    border-radius: 3px;
+    border: currentColor;
+    border-image: none;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 226px;
+}
+
+    .login-btn:hover {
+        cursor: pointer;
+    }
+
+.con_ipt span:nth-last-of-type(1) a {
+    color: rgb(0, 113, 176);
+}
+
+.con_ipt span:nth-last-of-type(1) {
+    color: rgb(155, 155, 155);
+    font-size: 13px;
+    margin-left: 10px;
+    display: inline-block;
+}

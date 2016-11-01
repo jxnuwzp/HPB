@@ -1,0 +1,333 @@
+.page .main .titletab {
+	padding: 10px 30px 0px; width: 895px; overflow: hidden; float: right;
+}
+.titletab .titlecon {
+	padding: 20px 0px; height: 40px; color: rgb(111, 111, 111); line-height: 40px; overflow: hidden; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.titletab .titlecon {
+	padding-bottom: 13px; border-bottom-color: rgb(236, 242, 244); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.articleTitle a {
+	margin: 0px 10px 0px 0px; padding: 0px; border-radius: 5px; width: 130px; height: 35px; text-align: center; color: rgb(255, 255, 255); line-height: 35px; font-size: 16px; font-weight: normal; text-decoration: none; float: left; -webkit-border-radius: 5px; -moz-border-radius: 5px; diaplay: inline-block;
+}
+.titletab .titlecon .manage {
+	float: right;
+}
+.articleTitle .sel {
+	background: rgb(63, 169, 245);
+}
+.articleTitle .unsel {
+	background: rgb(237, 246, 250); color: rgb(122, 122, 122);
+}
+.titletab .titlecon .sel {
+	font-size: 30px; text-decoration: none; margin-top: 0px; margin-right: 10px; display: inline-block;
+}
+.titletab .titlecon .unsel {
+	font-size: 30px; text-decoration: none; margin-top: 0px; margin-right: 10px; display: inline-block;
+}
+.titletab .titlecon .sel {
+	color: rgb(19, 129, 192); padding-bottom: 10px; border-bottom-color: rgb(19, 129, 192); border-bottom-width: 3px; border-bottom-style: solid;
+}
+.titletab .titlecon .unsel {
+	color: rgb(0, 0, 0);
+}
+.titletab .titlecon h2 {
+	cursor: pointer;
+}
+a.bluebtn {
+	padding: 4px 12px; border-radius: 3px; color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 129, 192);
+}
+#accountname {
+	margin: 0px; padding: 4px 5px; border-radius: 5px; border: 1px solid rgb(180, 180, 180); border-image: none; width: 150px;
+}
+.monitor .menu a {
+	padding: 0px 5px; width: 88px; height: 36px; text-align: center; color: rgb(51, 51, 51); line-height: 36px; font-size: 16px; text-decoration: none; float: left; position: relative;
+}
+.monitor .menu .eli {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.monitor .menu {
+	padding: 0px 0px 15px; height: 36px; border-bottom-color: rgb(236, 242, 244); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.monitor .menu a:hover {
+	color: rgb(25, 25, 25);
+}
+.monitor .menu a:hover .arrow-top {
+	border-color: rgb(25, 25, 25) transparent transparent;
+}
+.monitor .menu a .arrow-top {
+	border-color: rgb(126, 126, 126) transparent transparent; top: 15px; right: 3px; position: absolute;
+}
+.monitor .menu a.selected {
+	border-bottom-color: rgb(18, 163, 217); border-bottom-width: 5px; border-bottom-style: solid; cursor: default;
+}
+.monitor .menu a.selected:hover {
+	border-bottom-color: rgb(18, 163, 217); border-bottom-width: 5px; border-bottom-style: solid; cursor: default;
+}
+.monitor .menu span {
+	height: 36px; color: rgb(25, 25, 25); line-height: 36px; padding-right: 15px; float: right; position: relative; cursor: pointer;
+}
+.monitor .menu span .arrow-top {
+	border-color: rgb(25, 25, 25) transparent transparent; top: 15px; right: 0px; position: absolute;
+}
+.page .monitor .pagebar {
+	padding: 0px 0px 20px;
+}
+.allgroup_cont {
+	left: -13px; top: 0px; width: 144px; height: 218px; display: none;
+}
+.menu .pb_body span.shangsanjiao {
+	border-width: 5px 5px 6px !important; border-style: solid !important; border-color: transparent transparent rgb(131, 131, 131) !important; border-image: none !important; top: -3px; width: 0px !important; height: 0px !important; padding-top: 0px; padding-right: 0px !important; padding-bottom: 0px; padding-left: 0px; margin-left: 6px; float: none !important; display: inline-block; position: relative;
+}
+.pb_body .ctllist {
+	height: 156px; line-height: 40px; margin-top: 48px;
+}
+.pb_body .ctllist li {
+	padding-left: 0px;
+}
+.cggroup_cont .pb_body .ctllist li:hover {
+	background: rgba(0, 0, 0, 0.3) !important; margin-right: 0px !important;
+}
+.cggroup_cont .pb_body .ctllist li.selected {
+	background: rgba(0, 0, 0, 0.3) !important; margin-right: 0px !important;
+}
+.allgroup_cont .ctllist li:hover {
+	background: rgba(0, 0, 0, 0.3) !important; margin-right: 0px !important;
+}
+.allgroup_cont .ctllist li.selected {
+	background: rgba(0, 0, 0, 0.3) !important; margin-right: 0px !important;
+}
+.page .ctllist li.cateitem {
+	overflow: hidden; padding-left: 0px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+#accountList td {
+	line-height: 1.5; -ms-word-break: break-all;
+}
+#accountList .t1 {
+	overflow: hidden;
+}
+#accountList td div.t1 a {
+	font-size: 14px;
+}
+#accountList .t1 span {
+	padding: 0px; font-size: 12px; display: block;
+}
+#accountList .t2 {
+	width: 100px; overflow: hidden;
+}
+#accountList .t3 {
+	width: 85px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t4 {
+	width: 85px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t5 {
+	width: 85px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t6 {
+	width: 85px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t7 {
+	width: 70px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t8 {
+	width: 95px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountList .t9 {
+	width: 60px; color: rgb(89, 89, 89); overflow: hidden; font-family: "Arial";
+}
+#accountArticle td {
+	line-height: 1.5; -ms-word-break: break-all;
+}
+#accountArticle .t1 {
+	width: 100px; overflow: hidden;
+}
+#accountArticle .t2 {
+	width: 240px; overflow: hidden;
+}
+#accountArticle .t3 {
+	width: 160px; overflow: hidden;
+}
+#accountArticle .t4 {
+	width: 55px; overflow: hidden;
+}
+#accountArticle .t5 {
+	width: 70px; overflow: hidden;
+}
+#accountArticle .t6 {
+	width: 70px; overflow: hidden;
+}
+#accountArticle .t7 {
+	width: 60px; overflow: hidden;
+}
+.datepickerPanel {
+	top: 11px; width: 120px; height: 30px; text-align: center; right: 0px; line-height: 30px; font-size: 12px; position: absolute; z-index: 999;
+}
+.datepickerPanel a.select {
+	border-radius: 18px; border: 1px solid rgb(18, 163, 217); border-image: none; width: auto; height: 30px; color: rgb(18, 163, 217); line-height: 30px; font-size: 14px; margin-top: -7px; float: none; display: block;
+}
+.datepickerPanel a.select:hover {
+	color: rgb(18, 163, 217);
+}
+.datepickerPanel .drop-down {
+	border-radius: 10px; border: 1px solid rgb(232, 232, 232); border-image: none; left: 0px; top: 45px; width: 120px; overflow: hidden; display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+.datepickerPanel .drop-down a {
+	width: auto; height: 33px; line-height: 33px; font-size: 14px; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid; float: none; display: block;
+}
+.monitor .menu .datepickerPanel .drop-down a:hover {
+	background: rgb(18, 163, 217); color: rgb(255, 255, 255); border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.datepickerPanel #daterangepicker {
+	border: currentColor; border-image: none; width: 0px; height: 0px; position: absolute;
+}
+.monitor .menu2 {
+	position: relative;
+}
+.monitor .menu2 a {
+	width: 55px; height: 30px; text-align: center; color: rgb(51, 51, 51); line-height: 30px; font-size: 14px; text-decoration: none; float: left; position: relative;
+}
+.monitor .menu2 a:hover .arrow-top {
+	border-color: rgb(25, 25, 25) transparent transparent;
+}
+.monitor .menu2 a .arrow-top {
+	border-color: rgb(126, 126, 126) transparent transparent; top: 15px; right: -5px; position: absolute;
+}
+.monitor .menu a:hover {
+	border-bottom-color: rgb(18, 163, 217); border-bottom-width: 5px; border-bottom-style: solid; cursor: default;
+}
+.monitor .menu a.select:hover {
+	border-radius: 4px; color: rgb(255, 255, 255); cursor: default; background-color: rgb(18, 163, 217);
+}
+.monitor .menu2 span {
+	height: 30px; color: rgb(25, 25, 25); line-height: 30px; padding-right: 15px; float: right; position: relative; cursor: pointer;
+}
+.monitor .menu2 span .arrow-top {
+	border-color: rgb(25, 25, 25) transparent transparent; top: 15px; right: 0px; position: absolute;
+}
+.relalist .alist ul {
+	width: 110%; overflow: hidden; padding-top: 15px; padding-bottom: 15px;
+}
+.relalist .alist li {
+	width: 160px; height: 70px; padding-left: 60px; float: left; position: relative; cursor: default;
+}
+.relalist .alist li.hover {
+	background-color: rgb(245, 247, 247);
+}
+.relalist .alist li a {
+	color: rgb(0, 153, 217); text-decoration: none;
+}
+.relalist .alist li a:hover {
+	text-decoration: underline;
+}
+.relalist .alist li .avatar {
+	border-radius: 50px; border: 3px solid rgb(255, 255, 255); border-image: none; left: 5px; top: 15px; width: 44px; height: 44px; overflow: hidden; position: absolute; box-shadow: 0px 0px 5px rgba(0,0,0,0.1); background-color: rgb(200, 200, 200);
+}
+.relalist .alist li .name {
+	color: rgb(46, 46, 46); padding-top: 18px; font-size: 16px;
+}
+.relalist .alist li .desc {
+	color: rgb(0, 0, 0); line-height: 1.5; font-size: 13px;
+}
+.t-2 .t4 {
+	width: 75px;
+}
+.t- .t5 {
+	width: 75px;
+}
+.t-2 .t6 {
+	width: 75px;
+}
+.mask_account {
+	background: rgba(0, 0, 0, 0.5); left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; z-index: 999;
+}
+.mask_con {
+	background: rgb(255, 255, 255); margin: 250px auto; padding: 20px; border-radius: 10px; width: 500px; height: 450px; position: relative;
+}
+.mask_con ul {
+	width: 100%; height: 90%; overflow: scroll;
+}
+.mask_con ul li {
+	padding: 20px; overflow: hidden; border-bottom-color: rgb(235, 235, 235); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.mask_con ul li:hover {
+	background: rgb(237, 239, 239);
+}
+.mask_con ul li .img {
+	border-radius: 50%; width: 55px; height: 55px; overflow: hidden;
+}
+.mask_con ul li .img img {
+	width: 100%; height: 100%;
+}
+.mask_con ul li .img {
+	float: left;
+}
+.mask_con ul li .msg {
+	float: left;
+}
+.mask_con ul li .msg {
+	width: 360px; overflow: hidden; margin-left: 20px;
+}
+.mask_con ul li .msg .name {
+	color: rgb(112, 112, 112); font-size: 16px; margin-bottom: 3px;
+}
+.mask_con ul li .msg .wxnum {
+	color: rgb(137, 138, 142); font-size: 12px;
+}
+.mask_con ul li .msg .per {
+	color: rgb(179, 180, 180); font-size: 12px;
+}
+.mask_con .mask_tit {
+	height: 35px; text-align: center; color: rgb(1, 154, 205); line-height: 3px; font-size: 22px; font-weight: bold;
+}
+.mask_con .mask_tit em {
+	background: url("/img/acctip.png") no-repeat 0% 0% / 100%; top: 5px; width: 25px; height: 25px; display: inline-block; position: relative;
+}
+.mask_con .del {
+	background: url("/img/maskdelete.png") no-repeat 0% 0% / 100%; top: 10px; width: 18px; height: 18px; right: 10px; position: absolute;
+}
+.mask_con .del:hover {
+	cursor: pointer;
+}
+.bodyover {
+	overflow: hidden;
+}
+.content #accountArticle tbody .t2 {
+	width: 230px;
+}
+.content #accountArticle2 tbody .t2 {
+	width: 230px;
+}
+.content #accountArticle tbody .t2 a {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.content #accountArticle2 tbody .t2 a {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.content #accountArticle tbody .t1 a {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.content #accountArticle2 tbody .t1 a {
+	overflow: hidden; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.content #accountArticle tbody .t1 {
+	width: 95px;
+}
+.content #accountArticle2 tbody .t1 {
+	width: 95px;
+}
+#accountArticle2 .t3 {
+	width: 160px; overflow: hidden;
+}
+#accountArticle2 .t4 {
+	width: 55px; overflow: hidden;
+}
+#accountArticle2 .t5 {
+	width: 70px; overflow: hidden;
+}
+#accountArticle2 .t6 {
+	width: 70px; overflow: hidden;
+}
+#accountArticle2 .t7 {
+	width: 60px; overflow: hidden;
+}
