@@ -1,0 +1,63 @@
+
+<% include shared/header.ejs %>
+
+    <!--================-->
+    <div class="main">
+        <div class="side">
+            <h2>我的</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t20"></em><a href="shop">我的信息</a>
+                </li>
+                <li>
+                    <em class="t23 "></em><a href="shoptask">我发布的任务</a>
+                </li>
+            </ul>
+            <h2>任务</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t7"></em><a href="shoppublishtask">发布任务</a>
+                </li>
+            </ul>
+            <h2>账户</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t7"></em><a href="shopcharge">充值</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="content monitor">
+
+            <div class="menu">
+                <a class="cateitem selected" href="http://www.weizhishu.com/monitor/account#"
+                   data-gid="">全部</a>
+                <!--<span>时间范围
+                    <input type="text" id="daterange" />
+                    <em class="arrow-top"></em>
+                </span>-->
+                <input id="dataTime" type="hidden">
+                <div class="datepickerPanel">
+                    <input id="daterangepicker" type="text">
+                    <a class="select" href="http://www.weizhishu.com/monitor/account#">最近一天</a>
+                    <div class="drop-down">
+                        <a href="http://www.weizhishu.com/monitor/account#"
+                           data-value="2">最近一天</a><a href="http://www.weizhishu.com/monitor/account#"
+                                                     data-value="3">过去7天</a><!--                    <a data-value="1" href="#">今天</a>--> <!--                    <a href="javascirpt:void(0);" class="customdate">自选</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="tl" id="accountList">
+                <a href="shopmanage">我的店铺</a>
+                <p>
+                <a href="shoptask">我发布的任务</a>
+                <p>
+                <a href="shopcharge">我的余额</a>
+                <p>
+            </div>
+
+        </div>
+    </div>
+<% include shared/footer %>
