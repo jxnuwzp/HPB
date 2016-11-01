@@ -8,12 +8,12 @@
     <title>好评帮</title>
 
     <link href="/img/favicon.ico" rel="icon" type="image/png">
-    <link href="files/pubstyle.css"
+    <link href="css/pubstyle.css"
           rel="stylesheet">
-    <link href="files/register.css" rel="stylesheet">
-    <link href="files/bootstrap.min.css" rel="stylesheet">     <!--<link rel="stylesheet" href="/css/bootstrap-theme.css">-->
-    <link href="files/jquery-ui-1.10.4.min.css" rel="stylesheet">
-    <link href="files/sliderLock.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">     <!--<link rel="stylesheet" href="/css/bootstrap-theme.css">-->
+    <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="css/sliderLock.css" rel="stylesheet">
 
 
     <meta name="GENERATOR" content="MSHTML 11.00.9600.18450">
@@ -23,7 +23,7 @@
         <div class="head_content">
             <a href="home.html">
                 <img alt="logo"
-                     src="files/logo_title.png" />
+                     src="images/logo_title.png" />
             </a>
         </div>
     </div>
@@ -31,7 +31,7 @@
         <form id="form_id">
             <div class="con_msg">
                 <div class="con_title">
-                    <img alt="注册" src="files/register.png" />
+                    <img alt="注册" src="images/register.png" />
                 </div>
                 <div class="con_ipt">
                     <div id="tip"></div>
@@ -80,7 +80,7 @@
                         </div>
                     </div><button class="login-btn">注册</button>
                     <span>
-                        已有微指数账号？ <a href="login.html">点此登录</a>
+                        已有微指数账号？ <a href="login">点此登录</a>
                     </span>
                 </div>
                 <div class="con_footer">
@@ -90,26 +90,19 @@
                     </span>
                     <div class="check">
                         <input type="checkbox">                         <img class="check_2"
-                                                                             src="files/uncheck.png" />
+                                                                             src="images/uncheck.png" />
                     </div>
                     <div class="check">
                         <input name="agr" id="agr" type="checkbox" checked="">
-                        <img class="check_1" src="files/check.png">
+                        <img class="check_1" src="images/check.png">
                     </div><span>
                         我已阅读并同意 <a href="#"
                                    target="_blank">服务条款</a>
                     </span>
                 </div>
-            </div><input name="sub" id="sub" type="hidden" value="2">
-            <input name="_k" type="hidden" value="f0be01271aa5bc6ecfc70e97cb4a7068">
-            <input name="_c" type="hidden" value="b144aebd0d46f60e42fc249b24e7c3dd">
-            <input name="_t" type="hidden" value="1477909592">
+            </div>           
         </form>
     </div>
-    <div class="footer">
-        <p>Copyright @ 2016 上海好评帮科技有限公司 All Rights Reserved 版权所有</p>
-        <p> 备案号：京ICP备xxxo号</p>
-
-    </div>
+   <% include shared/footer %>
 </body>
 </html>

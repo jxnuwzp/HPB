@@ -9,25 +9,25 @@
     <title>微指数_新媒体大数据领导者</title>
 
     <link href="/img/favicon.ico" rel="icon" type="image/png">
-    <link href="files/pubstyle.css"
+    <link href="css/pubstyle.css"
           rel="stylesheet">
-    <link href="files/login.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 
     <meta name="GENERATOR" content="MSHTML 11.00.9600.18450">
 </head>
 <body>
     <div class="head">
         <div class="head_content">
-            <a href="home.html">
+            <a href="home">
                 <img alt="logo"
-                     src="files/logo_title.png" />
+                     src="images/logo_title.png" />
             </a>
         </div>
     </div>
     <div class="content">
         <div class="con_msg">
             <div class="con_title">
-                <img alt="登录" src="files/login.png" />
+                <img alt="登录" src="images/login.png" />
             </div>
             <div class="con_ipt">
                 <div id="tip"></div>
@@ -43,17 +43,17 @@
                     <em></em>                   
                   <input name="code" type="text" placeholder="验证码" value="" />
                     <img height="40" class="code_img" onclick="this.src='/imgcode.php?'+Math.random()"
-                         alt="点击图片刷新验证码" src="files/imgcode.png" />
+                         alt="点击图片刷新验证码" src="images/imgcode.png" />
                 </div><button class="login-btn">
                     登录
                 </button>             
-                    <span>获取微指数账号？ <a href="register.html">点此注册</a></span>
+                    <span>获取微指数账号？ <a href="register">点此注册</a></span>
             </div>
             <div class="con_footer">
                 <div class="check">
                     <input name="autologin" id="autologin" type="checkbox"
                            checked="checked" />            
-                         <img src="files/check.png">
+                         <img src="images/check.png">
                 </div>
                 <span>
                     下次自动登录 <a href="#">忘记密码?</a>
@@ -61,10 +61,6 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>Copyright @ 2016 上海好评帮科技有限公司 All Rights Reserved 版权所有</p>
-        <p> 备案号：京ICP备xxxo号</p>
-
-    </div>
+  <% include shared/footer %>
 </body>
 </html>
