@@ -32,25 +32,25 @@
 	border-width: 1px medium 1px 1px; border-style: solid none solid solid; border-color: rgb(190, 190, 190) currentColor rgb(190, 190, 190) rgb(190, 190, 190); border-image: none; width: 40px; height: 39px; margin-top: 1px;
 }
 .con_ipt div:nth-of-type(2) em {
-	background: url("/img/ipt_1.png") no-repeat center;
+	background: url("/images/ipt_1.png") no-repeat center;
 }
 .con_ipt div:nth-of-type(3) em {
-	background: url("/img/ipt_0.png") no-repeat center;
+	background: url("/images/ipt_0.png") no-repeat center;
 }
 .con_ipt div:nth-of-type(4) em {
-	background: url("/img/ipt_1.png") no-repeat center;
+	background: url("/images/ipt_1.png") no-repeat center;
 }
 .con_ipt div:nth-of-type(5) em {
-	background: url("/img/ipt_2.png") no-repeat center;
+	background: url("/images/ipt_2.png") no-repeat center;
 }
 .show-ipt div:nth-of-type(1) em {
-	background: url("/img/ipt_3.png") no-repeat center;
+	background: url("/images/ipt_3.png") no-repeat center;
 }
 .show-ipt div:nth-of-type(2) em {
-	background: url("/img/ipt_4.png") no-repeat center;
+	background: url("/images/ipt_4.png") no-repeat center;
 }
 .show-ipt div:nth-of-type(3) em {
-	background: url("/img/ipt_2.png") no-repeat center;
+	background: url("/images/ipt_2.png") no-repeat center;
 }
 .group input {
 	padding: 12px 5px; border: 1px solid rgb(206, 206, 206); border-image: none; width: 288px; height: 39px; margin-top: 1px;
