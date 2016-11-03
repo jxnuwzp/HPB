@@ -1,13 +1,73 @@
-var mongoose = require('mongoose');
-var bcrypt   = require('bcrypt-nodejs');
+var mongodb = require('./db');
+var crypto = require('crypto');
 
-var userSchema = mongoose.Schema({
-    user             : {
-	username     :String,
-    email        : String,
-    password     : String,
-	name	     : String
-    }
-});
+function User(user) {
+    this.name = user.name;
+    this.password = user.password;
+    this.email = user.email;
+};
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = User;
+
+//
+User.prototype.save = function(callback) {
+    var md5 = crypto.createHash('md5'),
+        email_MD5 = md5.update(this.email.toLowerCase()).digest('hex');
+
+    //user info
+    var user = {
+        name: this.name,
+        password: this.password,
+        email: this.email
+    };
+    //open data base
+    mongodb.open(function(err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //get users
+        db.collection('users', function(err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
+
+            collection.insert(user, {
+                safe: true
+            }, function(err, user) {
+                mongodb.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, user[0]); //success
+            });
+        });
+    });
+};
+
+//get user info
+User.get = function(name, callback) {
+
+    mongodb.open(function(err, db) {
+        if (err) {
+            return callback(err);
+        }
+
+        db.collection('users', function(err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
+
+            collection.findOne({
+                name: name
+            }, function(err, user) {
+                mongodb.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, user);
+            });
+        });
+    });
+};

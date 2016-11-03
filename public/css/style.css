@@ -4,6 +4,7 @@ body {
     font-family: "microsoft yahei", Monaco, Menlo, Consolas, "Courier New", monospace;
     font-size: 14px;
     background-color: rgb(248, 248, 248);
+    text-align: center;
 }
 
 img {
@@ -157,9 +158,9 @@ a.non_link {
     text-decoration: none;
 }
 
-    a.non_link:hover {
-        color: rgb(17, 17, 17);
-    }
+a.non_link:hover {
+    color: rgb(17, 17, 17);
+}
 
 .search a {
     background-image: url("../img/icons-24.png");
@@ -183,52 +184,52 @@ a.non_link {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-    .search input {
-        margin: 0px;
-        padding: 4px 0px;
-        border: currentColor;
-        border-image: none;
-        left: 10px;
-        top: 10px;
-        width: 510px;
-        height: 20px;
-        color: rgb(0, 0, 0);
-        line-height: normal;
-        font-size: 16px;
-        position: absolute;
-        background-color: transparent;
-    }
+.search input {
+    margin: 0px;
+    padding: 4px 0px;
+    border: currentColor;
+    border-image: none;
+    left: 10px;
+    top: 10px;
+    width: 510px;
+    height: 20px;
+    color: rgb(0, 0, 0);
+    line-height: normal;
+    font-size: 16px;
+    position: absolute;
+    background-color: transparent;
+}
 
-    .search a {
-        background-position: 0px 0px;
-        top: 12px;
-        width: 24px;
-        height: 24px;
-        right: 10px;
-        position: absolute;
-    }
+.search a {
+    background-position: 0px 0px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    position: absolute;
+}
 
-    .search label {
-        left: 0px;
-        top: 0px;
-        width: 560px;
-        height: 48px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        line-height: 48px;
-        position: absolute;
-        z-index: 2;
-        cursor: text;
-    }
+.search label {
+    left: 0px;
+    top: 0px;
+    width: 560px;
+    height: 48px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 48px;
+    position: absolute;
+    z-index: 2;
+    cursor: text;
+}
 
 .focus.search {
     border-color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
 }
 
-    .focus.search a {
-        background-position: -24px 0px;
-    }
+.focus.search a {
+    background-position: -24px 0px;
+}
 
 #search_active {
     background: rgb(255, 255, 255);
@@ -245,13 +246,13 @@ a.non_link {
     max-height: 300px;
 }
 
-    #search_active li {
-        margin: 0px auto;
-        width: 540px;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-    }
+#search_active li {
+    margin: 0px auto;
+    width: 540px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
 
 .arrow-top {
     border-width: 6px 6px 0px;
@@ -301,20 +302,20 @@ a.non_link {
     min-width: 1200px;
 }
 
-    .index .header .top {
-        margin: 0px auto;
-        padding: 25px 0px;
-        width: 1200px;
-        height: 50px;
-        position: relative;
-        z-index: 999;
-    }
+.index .header .top {
+    margin: 0px auto;
+    padding: 25px 0px;
+    width: 1200px;
+    height: 50px;
+    position: relative;
+    z-index: 999;
+}
 
-    .index .header a.logo {
-        height: 50px;
-        float: left;
-        display: block;
-    }
+.index .header a.logo {
+    height: 50px;
+    float: left;
+    display: block;
+}
 
 .index .button {
     padding: 1px 0px;
@@ -323,31 +324,31 @@ a.non_link {
     float: right;
 }
 
-    .index .button a {
-        float: left;
-        display: block;
-    }
+.index .button a {
+    float: left;
+    display: block;
+}
 
-    .index .button .login {
-        background-position: 0px 0px;
-        width: 120px;
-        height: 48px;
-    }
+.index .button .login {
+    background-position: 0px 0px;
+    width: 120px;
+    height: 48px;
+}
 
-    .index .button a.login:hover {
-        background-position: 0px -48px;
-    }
+.index .button a.login:hover {
+    background-position: 0px -48px;
+}
 
-    .index .button .register {
-        background-position: -120px 0px;
-        width: 100px;
-        height: 48px;
-        margin-left: 15px;
-    }
+.index .button .register {
+    background-position: -120px 0px;
+    width: 100px;
+    height: 48px;
+    margin-left: 15px;
+}
 
-    .index .button a.register:hover {
-        background-position: -120px -48px;
-    }
+.index .button a.register:hover {
+    background-position: -120px -48px;
+}
 
 .index .search {
     left: 50%;
@@ -363,9 +364,9 @@ a.non_link {
     display: block;
 }
 
-    .index .header a.managebtn:hover {
-        background: url("../img/mmbtn-hover.png");
-    }
+.index .header a.managebtn:hover {
+    background: url("../img/mmbtn-hover.png");
+}
 
 .index .banner {
     margin: 0px auto;
@@ -374,72 +375,72 @@ a.non_link {
     padding-top: 75px;
 }
 
-    .index .banner .left {
-        width: 370px;
-        text-align: right;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        float: left;
-    }
+.index .banner .left {
+    width: 370px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    float: left;
+}
 
-    .index .banner h1 {
-        font-size: 72px;
-        font-weight: normal;
-    }
+.index .banner h1 {
+    font-size: 72px;
+    font-weight: normal;
+}
 
-    .index .banner .left p {
-        font-size: 30px;
-    }
+.index .banner .left p {
+    font-size: 30px;
+}
 
-    .index .banner .right {
-        width: 560px;
-        text-align: left;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        margin-left: 70px;
-        float: left;
-    }
+.index .banner .right {
+    width: 560px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-left: 70px;
+    float: left;
+}
 
-        .index .banner .right h2 {
-            padding: 10px 0px 20px;
-            font-size: 36px;
-        }
+.index .banner .right h2 {
+    padding: 10px 0px 20px;
+    font-size: 36px;
+}
 
-        .index .banner .right p {
-            line-height: 1.5;
-            font-size: 21px;
-        }
+.index .banner .right p {
+    line-height: 1.5;
+    font-size: 21px;
+}
 
-    .index .banner .links {
-        padding-top: 40px;
-    }
+.index .banner .links {
+    padding-top: 40px;
+}
 
-        .index .banner .links a {
-            border-radius: 4px;
-            height: 60px;
-            text-align: center;
-            line-height: 60px;
-            font-size: 19px;
-            text-decoration: none;
-            float: left;
-        }
+.index .banner .links a {
+    border-radius: 4px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 19px;
+    text-decoration: none;
+    float: left;
+}
 
-            .index .banner .links a:hover {
-                opacity: 0.9;
-            }
+.index .banner .links a:hover {
+    opacity: 0.9;
+}
 
-        .index .banner .links .btn-why {
-            width: 235px;
-            color: rgb(0, 0, 0);
-            background-color: rgb(255, 228, 0);
-        }
+.index .banner .links .btn-why {
+    width: 235px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 228, 0);
+}
 
-        .index .banner .links .btn-me {
-            width: 165px;
-            color: rgb(255, 255, 255);
-            margin-left: 20px;
-            background-color: rgb(0, 69, 109);
-        }
+.index .banner .links .btn-me {
+    width: 165px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    background-color: rgb(0, 69, 109);
+}
 
 .index .main {
     margin: -15px auto 0px;
@@ -450,77 +451,77 @@ a.non_link {
     background-color: rgb(255, 255, 255);
 }
 
-    .index .main .intro {
-        padding: 20px 0px;
-        width: 100%;
-        overflow: hidden;
-    }
+.index .main .intro {
+    padding: 20px 0px;
+    width: 100%;
+    overflow: hidden;
+}
 
 .index .intro li {
     float: left;
 }
 
-    .index .intro li a {
-        margin: 0px 24px;
-        padding: 20px;
-        width: 210px;
-        text-decoration: none;
-        float: left;
-        display: inline;
-        -webkit-transition-property: background-color;
-        -webkit-transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease;
-    }
+.index .intro li a {
+    margin: 0px 24px;
+    padding: 20px;
+    width: 210px;
+    text-decoration: none;
+    float: left;
+    display: inline;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
 
-        .index .intro li a:hover {
-            background: rgb(248, 248, 248);
-        }
+.index .intro li a:hover {
+    background: rgb(248, 248, 248);
+}
 
-    .index .intro li .content {
-        width: 210px;
-        overflow: hidden;
-    }
+.index .intro li .content {
+    width: 210px;
+    overflow: hidden;
+}
 
-    .index .intro li .icons {
-        margin: 0px auto;
-        width: 87px;
-        height: 83px;
-    }
+.index .intro li .icons {
+    margin: 0px auto;
+    width: 87px;
+    height: 83px;
+}
 
-    .index .intro li .public-list.icons {
-        background-position: 0px -96px;
-    }
+.index .intro li .public-list.icons {
+    background-position: 0px -96px;
+}
 
-    .index .intro li .custom-group.icons {
-        background-position: -87px -96px;
-    }
+.index .intro li .custom-group.icons {
+    background-position: -87px -96px;
+}
 
-    .index .intro li .wxfans-add.icons {
-        background: url("../img/weifans.png") no-repeat 0px 0px;
-    }
+.index .intro li .wxfans-add.icons {
+    background: url("../img/weifans.png") no-repeat 0px 0px;
+}
 
-    .index .intro li .effect-query.icons {
-        background-position: -174px -96px;
-    }
+.index .intro li .effect-query.icons {
+    background-position: -174px -96px;
+}
 
-    .index .intro li .content-mining.icons {
-        background-position: -261px -96px;
-    }
+.index .intro li .content-mining.icons {
+    background-position: -261px -96px;
+}
 
-    .index .intro li h2 {
-        margin: 0px;
-        padding: 20px 0px 10px;
-        text-align: center;
-        color: rgb(46, 46, 46);
-        font-size: 22px;
-        font-weight: normal;
-    }
+.index .intro li h2 {
+    margin: 0px;
+    padding: 20px 0px 10px;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    font-size: 22px;
+    font-weight: normal;
+}
 
-    .index .intro li .desc {
-        color: rgb(103, 103, 103);
-        line-height: 24px;
-        font-size: 14px;
-    }
+.index .intro li .desc {
+    color: rgb(103, 103, 103);
+    line-height: 24px;
+    font-size: 14px;
+}
 
 .index .main h2 {
     margin: 0px;
@@ -536,166 +537,166 @@ a.non_link {
     position: relative;
 }
 
-    .index .main .rank .control {
-        top: 120px;
-        width: 32px;
-        height: 64px;
-        line-height: 64px;
-        overflow: hidden;
-        font-size: 20px;
-        font-weight: bold;
-        position: absolute;
-        z-index: 99;
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+.index .main .rank .control {
+    top: 120px;
+    width: 32px;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-    .index .main .rank .disabled.control {
-        cursor: default;
-        opacity: 0.6;
-    }
+.index .main .rank .disabled.control {
+    cursor: default;
+    opacity: 0.6;
+}
 
-    .index .main .rank .control span {
-        top: 22px;
-        position: absolute;
-        background-repeat: no-repeat;
-    }
+.index .main .rank .control span {
+    top: 22px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
 
-    .index .main .rank .left.control span {
-        background-position: -220px 0px;
-        left: 8px;
-        width: 11px;
-        height: 19px;
-    }
+.index .main .rank .left.control span {
+    background-position: -220px 0px;
+    left: 8px;
+    width: 11px;
+    height: 19px;
+}
 
-    .index .main .rank .right.control span {
-        background-position: -231px 0px;
-        width: 11px;
-        height: 19px;
-        right: 8px;
-    }
+.index .main .rank .right.control span {
+    background-position: -231px 0px;
+    width: 11px;
+    height: 19px;
+    right: 8px;
+}
 
-    .index .main .rank .left.control {
-        left: 0px;
-    }
+.index .main .rank .left.control {
+    left: 0px;
+}
 
-    .index .main .rank .right.control {
-        right: 0px;
-    }
+.index .main .rank .right.control {
+    right: 0px;
+}
 
-    .index .main .rank .list {
-        margin: 0px auto;
-        width: 1120px;
-        height: 274px;
-        overflow: hidden;
-        position: relative;
-    }
+.index .main .rank .list {
+    margin: 0px auto;
+    width: 1120px;
+    height: 274px;
+    overflow: hidden;
+    position: relative;
+}
 
-        .index .main .rank .list ul {
-            left: 0px;
-            top: 0px;
-            width: 500%;
-            overflow: hidden;
-            position: absolute;
-        }
+.index .main .rank .list ul {
+    left: 0px;
+    top: 0px;
+    width: 500%;
+    overflow: hidden;
+    position: absolute;
+}
 
-        .index .main .rank .list li {
-            width: 265px;
-            margin-right: 20px;
-            float: left;
-            position: relative;
-            background-color: rgb(248, 248, 248);
-        }
+.index .main .rank .list li {
+    width: 265px;
+    margin-right: 20px;
+    float: left;
+    position: relative;
+    background-color: rgb(248, 248, 248);
+}
 
-        .index .main .rank .list h3 {
-            margin: 0px;
-            padding: 0px 0px 0px 40px;
-            color: rgb(73, 148, 60);
-            line-height: 50px;
-            font-size: 16px;
-        }
+.index .main .rank .list h3 {
+    margin: 0px;
+    padding: 0px 0px 0px 40px;
+    color: rgb(73, 148, 60);
+    line-height: 50px;
+    font-size: 16px;
+}
 
-        .index .main .rank .list .item {
-            height: 33px;
-            color: rgb(109, 109, 109);
-            line-height: 33px;
-            overflow: hidden;
-            padding-left: 58px;
-            font-size: 14px;
-            position: relative;
-        }
+.index .main .rank .list .item {
+    height: 33px;
+    color: rgb(109, 109, 109);
+    line-height: 33px;
+    overflow: hidden;
+    padding-left: 58px;
+    font-size: 14px;
+    position: relative;
+}
 
-        .index .main .rank .list .r1.item em {
-            background-position: -242px 0px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank .list .r1.item em {
+    background-position: -242px 0px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank .list .r2.item em {
-            background-position: -242px -27px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank .list .r2.item em {
+    background-position: -242px -27px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank .list .r3.item em {
-            background-position: -242px -54px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank .list .r3.item em {
+    background-position: -242px -54px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank .list .item em {
-            left: 22px;
-            top: 3px;
-            width: 27px;
-            height: 27px;
-            text-align: center;
-            line-height: 27px;
-            font-style: normal;
-            position: absolute;
-        }
+.index .main .rank .list .item em {
+    left: 22px;
+    top: 3px;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    font-style: normal;
+    position: absolute;
+}
 
-        .index .main .rank .list .more {
-            width: 100%;
-            height: 44px;
-            padding-top: 15px;
-        }
+.index .main .rank .list .more {
+    width: 100%;
+    height: 44px;
+    padding-top: 15px;
+}
 
-            .index .main .rank .list .more a {
-                width: 100%;
-                text-align: center;
-                color: rgb(108, 108, 108);
-                line-height: 44px;
-                font-size: 14px;
-                text-decoration: none;
-                display: block;
-                background-color: rgb(239, 239, 239);
-            }
+.index .main .rank .list .more a {
+    width: 100%;
+    text-align: center;
+    color: rgb(108, 108, 108);
+    line-height: 44px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(239, 239, 239);
+}
 
-                .index .main .rank .list .more a:hover {
-                    color: rgb(75, 75, 75);
-                    background-color: rgb(222, 222, 222);
-                }
+.index .main .rank .list .more a:hover {
+    color: rgb(75, 75, 75);
+    background-color: rgb(222, 222, 222);
+}
 
-        .index .main .rank .list .add {
-            top: 8px;
-            width: 90px;
-            height: 34px;
-            text-align: center;
-            right: 0px;
-            display: none;
-            position: absolute;
-        }
+.index .main .rank .list .add {
+    top: 8px;
+    width: 90px;
+    height: 34px;
+    text-align: center;
+    right: 0px;
+    display: none;
+    position: absolute;
+}
 
-            .index .main .rank .list .add a {
-                width: 90px;
-                height: 34px;
-                color: rgb(255, 255, 255);
-                line-height: 34px;
-                text-decoration: none;
-                display: block;
-                background-color: rgb(83, 182, 17);
-            }
+.index .main .rank .list .add a {
+    width: 90px;
+    height: 34px;
+    color: rgb(255, 255, 255);
+    line-height: 34px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(83, 182, 17);
+}
 
-                .index .main .rank .list .add a:hover {
-                    background-color: rgb(97, 179, 82);
-                }
+.index .main .rank .list .add a:hover {
+    background-color: rgb(97, 179, 82);
+}
 
 .index .main .rank1 {
     padding: 20px 0px;
@@ -703,166 +704,166 @@ a.non_link {
     position: relative;
 }
 
-    .index .main .rank1 .control {
-        top: 120px;
-        width: 32px;
-        height: 64px;
-        line-height: 64px;
-        overflow: hidden;
-        font-size: 20px;
-        font-weight: bold;
-        position: absolute;
-        z-index: 99;
-        cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+.index .main .rank1 .control {
+    top: 120px;
+    width: 32px;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-    .index .main .rank1 .disabled.control {
-        cursor: default;
-        opacity: 0.6;
-    }
+.index .main .rank1 .disabled.control {
+    cursor: default;
+    opacity: 0.6;
+}
 
-    .index .main .rank1 .control span {
-        top: 22px;
-        position: absolute;
-        background-repeat: no-repeat;
-    }
+.index .main .rank1 .control span {
+    top: 22px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
 
-    .index .main .rank1 .left.control span {
-        background-position: -220px 0px;
-        left: 8px;
-        width: 11px;
-        height: 19px;
-    }
+.index .main .rank1 .left.control span {
+    background-position: -220px 0px;
+    left: 8px;
+    width: 11px;
+    height: 19px;
+}
 
-    .index .main .rank1 .right.control span {
-        background-position: -231px 0px;
-        width: 11px;
-        height: 19px;
-        right: 8px;
-    }
+.index .main .rank1 .right.control span {
+    background-position: -231px 0px;
+    width: 11px;
+    height: 19px;
+    right: 8px;
+}
 
-    .index .main .rank1 .left.control {
-        left: 0px;
-    }
+.index .main .rank1 .left.control {
+    left: 0px;
+}
 
-    .index .main .rank1 .right.control {
-        right: 0px;
-    }
+.index .main .rank1 .right.control {
+    right: 0px;
+}
 
-    .index .main .rank1 .list {
-        margin: 0px auto;
-        width: 1120px;
-        height: 274px;
-        overflow: hidden;
-        position: relative;
-    }
+.index .main .rank1 .list {
+    margin: 0px auto;
+    width: 1120px;
+    height: 274px;
+    overflow: hidden;
+    position: relative;
+}
 
-        .index .main .rank1 .list ul {
-            left: 0px;
-            top: 0px;
-            width: 500%;
-            overflow: hidden;
-            position: absolute;
-        }
+.index .main .rank1 .list ul {
+    left: 0px;
+    top: 0px;
+    width: 500%;
+    overflow: hidden;
+    position: absolute;
+}
 
-        .index .main .rank1 .list li {
-            width: 265px;
-            margin-right: 20px;
-            float: left;
-            position: relative;
-            background-color: rgb(248, 248, 248);
-        }
+.index .main .rank1 .list li {
+    width: 265px;
+    margin-right: 20px;
+    float: left;
+    position: relative;
+    background-color: rgb(248, 248, 248);
+}
 
-        .index .main .rank1 .list h3 {
-            margin: 0px;
-            padding: 0px 0px 0px 40px;
-            color: rgb(73, 148, 60);
-            line-height: 50px;
-            font-size: 16px;
-        }
+.index .main .rank1 .list h3 {
+    margin: 0px;
+    padding: 0px 0px 0px 40px;
+    color: rgb(73, 148, 60);
+    line-height: 50px;
+    font-size: 16px;
+}
 
-        .index .main .rank1 .list .item {
-            height: 33px;
-            color: rgb(109, 109, 109);
-            line-height: 33px;
-            overflow: hidden;
-            padding-left: 58px;
-            font-size: 14px;
-            position: relative;
-        }
+.index .main .rank1 .list .item {
+    height: 33px;
+    color: rgb(109, 109, 109);
+    line-height: 33px;
+    overflow: hidden;
+    padding-left: 58px;
+    font-size: 14px;
+    position: relative;
+}
 
-        .index .main .rank1 .list .r1.item em {
-            background-position: -242px 0px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank1 .list .r1.item em {
+    background-position: -242px 0px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank1 .list .r2.item em {
-            background-position: -242px -27px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank1 .list .r2.item em {
+    background-position: -242px -27px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank1 .list .r3.item em {
-            background-position: -242px -54px;
-            color: rgb(255, 255, 255);
-        }
+.index .main .rank1 .list .r3.item em {
+    background-position: -242px -54px;
+    color: rgb(255, 255, 255);
+}
 
-        .index .main .rank1 .list .item em {
-            left: 22px;
-            top: 3px;
-            width: 27px;
-            height: 27px;
-            text-align: center;
-            line-height: 27px;
-            font-style: normal;
-            position: absolute;
-        }
+.index .main .rank1 .list .item em {
+    left: 22px;
+    top: 3px;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    font-style: normal;
+    position: absolute;
+}
 
-        .index .main .rank1 .list .more {
-            width: 100%;
-            height: 44px;
-            padding-top: 15px;
-        }
+.index .main .rank1 .list .more {
+    width: 100%;
+    height: 44px;
+    padding-top: 15px;
+}
 
-            .index .main .rank1 .list .more a {
-                width: 100%;
-                text-align: center;
-                color: rgb(108, 108, 108);
-                line-height: 44px;
-                font-size: 14px;
-                text-decoration: none;
-                display: block;
-                background-color: rgb(239, 239, 239);
-            }
+.index .main .rank1 .list .more a {
+    width: 100%;
+    text-align: center;
+    color: rgb(108, 108, 108);
+    line-height: 44px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(239, 239, 239);
+}
 
-                .index .main .rank1 .list .more a:hover {
-                    color: rgb(75, 75, 75);
-                    background-color: rgb(222, 222, 222);
-                }
+.index .main .rank1 .list .more a:hover {
+    color: rgb(75, 75, 75);
+    background-color: rgb(222, 222, 222);
+}
 
-        .index .main .rank1 .list .add {
-            top: 8px;
-            width: 90px;
-            height: 34px;
-            text-align: center;
-            right: 0px;
-            display: none;
-            position: absolute;
-        }
+.index .main .rank1 .list .add {
+    top: 8px;
+    width: 90px;
+    height: 34px;
+    text-align: center;
+    right: 0px;
+    display: none;
+    position: absolute;
+}
 
-            .index .main .rank1 .list .add a {
-                width: 90px;
-                height: 34px;
-                color: rgb(255, 255, 255);
-                line-height: 34px;
-                text-decoration: none;
-                display: block;
-                background-color: rgb(83, 182, 17);
-            }
+.index .main .rank1 .list .add a {
+    width: 90px;
+    height: 34px;
+    color: rgb(255, 255, 255);
+    line-height: 34px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(83, 182, 17);
+}
 
-                .index .main .rank1 .list .add a:hover {
-                    background-color: rgb(97, 179, 82);
-                }
+.index .main .rank1 .list .add a:hover {
+    background-color: rgb(97, 179, 82);
+}
 
 .index .main .group {
     margin: 0px auto;
@@ -870,96 +871,96 @@ a.non_link {
     overflow: hidden;
 }
 
-    .index .main .group ul {
-        width: 1200px;
-        overflow: hidden;
-        padding-bottom: 30px;
-    }
+.index .main .group ul {
+    width: 1200px;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
 
-    .index .main .group li {
-        width: 205px;
-        height: 79px;
-        padding-left: 60px;
-        margin-right: 20px;
-        border-bottom-color: rgb(230, 230, 230);
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        float: left;
-        position: relative;
-        cursor: default;
-    }
+.index .main .group li {
+    width: 205px;
+    height: 79px;
+    padding-left: 60px;
+    margin-right: 20px;
+    border-bottom-color: rgb(230, 230, 230);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    float: left;
+    position: relative;
+    cursor: default;
+}
 
-        .index .main .group li.hover {
-            background-color: rgb(245, 247, 247);
-        }
+.index .main .group li.hover {
+    background-color: rgb(245, 247, 247);
+}
 
-        .index .main .group li .add {
-            top: 0px;
-            width: 90px;
-            height: 34px;
-            text-align: center;
-            right: 0px;
-            line-height: 34px;
-            display: none;
-            position: absolute;
-        }
+.index .main .group li .add {
+    top: 0px;
+    width: 90px;
+    height: 34px;
+    text-align: center;
+    right: 0px;
+    line-height: 34px;
+    display: none;
+    position: absolute;
+}
 
-            .index .main .group li .add a {
-                width: 90px;
-                height: 34px;
-                color: rgb(255, 255, 255);
-                text-decoration: none;
-                display: block;
-                background-color: rgb(83, 182, 17);
-            }
+.index .main .group li .add a {
+    width: 90px;
+    height: 34px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    background-color: rgb(83, 182, 17);
+}
 
-                .index .main .group li .add a:hover {
-                    background-color: rgb(97, 179, 82);
-                }
+.index .main .group li .add a:hover {
+    background-color: rgb(97, 179, 82);
+}
 
-        .index .main .group li .avatar {
-            border-radius: 50px;
-            border: 3px solid rgb(255, 255, 255);
-            border-image: none;
-            left: 5px;
-            top: 15px;
-            width: 44px;
-            height: 44px;
-            overflow: hidden;
-            position: absolute;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-            background-color: rgb(200, 200, 200);
-        }
+.index .main .group li .avatar {
+    border-radius: 50px;
+    border: 3px solid rgb(255, 255, 255);
+    border-image: none;
+    left: 5px;
+    top: 15px;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(200, 200, 200);
+}
 
-        .index .main .group li.add .avatar {
-            text-align: center;
-            color: rgb(255, 255, 255);
-            line-height: 40px;
-            font-size: 28px;
-            background-color: rgb(83, 182, 17);
-        }
+.index .main .group li.add .avatar {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    font-size: 28px;
+    background-color: rgb(83, 182, 17);
+}
 
-        .index .main .group li.add a {
-            color: rgb(83, 182, 17);
-            line-height: 79px;
-            text-decoration: none;
-        }
+.index .main .group li.add a {
+    color: rgb(83, 182, 17);
+    line-height: 79px;
+    text-decoration: none;
+}
 
-            .index .main .group li.add a:hover {
-                text-decoration: underline;
-            }
+.index .main .group li.add a:hover {
+    text-decoration: underline;
+}
 
-        .index .main .group li .name {
-            color: rgb(46, 46, 46);
-            padding-top: 18px;
-            font-size: 18px;
-        }
+.index .main .group li .name {
+    color: rgb(46, 46, 46);
+    padding-top: 18px;
+    font-size: 18px;
+}
 
-        .index .main .group li .desc {
-            color: rgb(57, 134, 220);
-            line-height: 1.5;
-            font-size: 13px;
-        }
+.index .main .group li .desc {
+    color: rgb(57, 134, 220);
+    line-height: 1.5;
+    font-size: 13px;
+}
 
 .index .main .customers {
     margin: 0px auto;
@@ -967,26 +968,26 @@ a.non_link {
     overflow: hidden;
 }
 
-    .index .main .customers ul {
-        padding: 10px 0px;
-        width: 1200px;
-        overflow: hidden;
-    }
+.index .main .customers ul {
+    padding: 10px 0px;
+    width: 1200px;
+    overflow: hidden;
+}
 
-    .index .main .customers li {
-        margin: 0px 30px 30px 0px;
-        width: 160px;
-        height: 66px;
-        float: left;
-        background-color: rgb(204, 204, 204);
-    }
+.index .main .customers li {
+    margin: 0px 30px 30px 0px;
+    width: 160px;
+    height: 66px;
+    float: left;
+    background-color: rgb(204, 204, 204);
+}
 
-        .index .main .customers li img {
-            border: 1px solid rgb(224, 224, 224);
-            border-image: none;
-            width: 100%;
-            height: 100%;
-        }
+.index .main .customers li img {
+    border: 1px solid rgb(224, 224, 224);
+    border-image: none;
+    width: 100%;
+    height: 100%;
+}
 
 .index .footer {
     width: 100%;
@@ -995,176 +996,176 @@ a.non_link {
     background-color: rgb(56, 56, 56);
 }
 
-    .index .footer .top {
-        margin: 0px auto;
-        width: 1200px;
-        height: 15px;
-        background-color: rgb(255, 255, 255);
-    }
+.index .footer .top {
+    margin: 0px auto;
+    width: 1200px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
+}
 
-    .index .footer ul {
-        margin: 0px auto;
-        width: 1120px;
-        overflow: hidden;
-    }
+.index .footer ul {
+    margin: 0px auto;
+    width: 1120px;
+    overflow: hidden;
+}
 
-    .index .footer li {
-        padding: 0px 10px;
-        width: 245px;
-        height: 280px;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        margin-right: 15px;
-        float: left;
-    }
+.index .footer li {
+    padding: 0px 10px;
+    width: 245px;
+    height: 280px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-right: 15px;
+    float: left;
+}
 
-        .index .footer li.link {
-            width: 145px;
-            padding-left: 100px;
-        }
+.index .footer li.link {
+    width: 145px;
+    padding-left: 100px;
+}
 
-    .index .footer h2 {
-        margin: 0px;
-        padding: 0px;
-        line-height: 3;
-        font-size: 22px;
-        font-weight: normal;
-    }
+.index .footer h2 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 3;
+    font-size: 22px;
+    font-weight: normal;
+}
 
-    .index .footer h3 {
-        margin: 0px;
-        padding: 10px 0px 5px;
-        font-size: 14px;
-        font-weight: normal;
-    }
+.index .footer h3 {
+    margin: 0px;
+    padding: 10px 0px 5px;
+    font-size: 14px;
+    font-weight: normal;
+}
 
-    .index .footer .qrcode {
-        border: 5px solid rgb(255, 255, 255);
-        border-image: none;
-    }
+.index .footer .qrcode {
+    border: 5px solid rgb(255, 255, 255);
+    border-image: none;
+}
 
-    .index .footer li .desc {
-        padding: 10px 0px;
-        line-height: 1.5;
-        font-size: 14px;
-    }
+.index .footer li .desc {
+    padding: 10px 0px;
+    line-height: 1.5;
+    font-size: 14px;
+}
 
-    .index .footer .src-ipt {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+.index .footer .src-ipt {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
-        .index .footer .src-ipt .input {
-            padding: 9px 7px;
-            border-radius: 3px;
-            width: 160px;
-            height: 18px;
-            line-height: 18px;
-            background-color: rgb(255, 255, 255);
-        }
+.index .footer .src-ipt .input {
+    padding: 9px 7px;
+    border-radius: 3px;
+    width: 160px;
+    height: 18px;
+    line-height: 18px;
+    background-color: rgb(255, 255, 255);
+}
 
-            .index .footer .src-ipt .input input {
-                margin: 0px;
-                padding: 0px;
-                border: currentColor;
-                border-image: none;
-                width: 100%;
-                line-height: normal;
-                font-size: 14px;
-                background-color: transparent;
-            }
+.index .footer .src-ipt .input input {
+    margin: 0px;
+    padding: 0px;
+    border: currentColor;
+    border-image: none;
+    width: 100%;
+    line-height: normal;
+    font-size: 14px;
+    background-color: transparent;
+}
 
-        .index .footer .src-ipt a {
-            border-radius: 3px;
-            top: 0px;
-            width: 66px;
-            height: 36px;
-            text-align: center;
-            right: 0px;
-            color: rgb(255, 255, 255);
-            line-height: 36px;
-            text-decoration: none;
-            position: absolute;
-            background-color: rgb(104, 205, 48);
-        }
+.index .footer .src-ipt a {
+    border-radius: 3px;
+    top: 0px;
+    width: 66px;
+    height: 36px;
+    text-align: center;
+    right: 0px;
+    color: rgb(255, 255, 255);
+    line-height: 36px;
+    text-decoration: none;
+    position: absolute;
+    background-color: rgb(104, 205, 48);
+}
 
-            .index .footer .src-ipt a:hover {
-                background-color: rgb(97, 179, 82);
-            }
+.index .footer .src-ipt a:hover {
+    background-color: rgb(97, 179, 82);
+}
 
-    .index .footer .tips {
-        padding-bottom: 10px;
-    }
+.index .footer .tips {
+    padding-bottom: 10px;
+}
 
-        .index .footer .tips a {
-            color: rgb(133, 232, 247);
-            line-height: 2;
-            font-size: 12px;
-            text-decoration: none;
-        }
+.index .footer .tips a {
+    color: rgb(133, 232, 247);
+    line-height: 2;
+    font-size: 12px;
+    text-decoration: none;
+}
 
-            .index .footer .tips a:hover {
-                text-decoration: underline;
-            }
+.index .footer .tips a:hover {
+    text-decoration: underline;
+}
 
-    .index .footer .comp a {
-        color: rgb(255, 255, 255);
-        padding-bottom: 10px;
-        font-size: 14px;
-        text-decoration: none;
-        display: block;
-    }
+.index .footer .comp a {
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+}
 
-    .index .footer .comp {
-        padding-top: 12px;
-    }
+.index .footer .comp {
+    padding-top: 12px;
+}
 
-        .index .footer .comp a:hover {
-            text-decoration: underline;
-        }
+.index .footer .comp a:hover {
+    text-decoration: underline;
+}
 
-    .index .footer .kfqq {
-        height: 48px;
-        line-height: 42px;
-        padding-left: 40px;
-        font-size: 14px;
-        position: relative;
-    }
+.index .footer .kfqq {
+    height: 48px;
+    line-height: 42px;
+    padding-left: 40px;
+    font-size: 14px;
+    position: relative;
+}
 
-    .index .footer .kfemail {
-        padding: 4px 0px 4px 40px;
-        height: 40px;
-        line-height: 18px;
-        font-size: 14px;
-        position: relative;
-    }
+.index .footer .kfemail {
+    padding: 4px 0px 4px 40px;
+    height: 40px;
+    line-height: 18px;
+    font-size: 14px;
+    position: relative;
+}
 
-    .index .footer .kfqq em {
-        background-position: -269px 0px;
-        left: 0px;
-        top: 6px;
-        width: 33px;
-        height: 33px;
-        position: absolute;
-    }
+.index .footer .kfqq em {
+    background-position: -269px 0px;
+    left: 0px;
+    top: 6px;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+}
 
-    .index .footer .kfemail em {
-        background-position: -269px -33px;
-        left: 0px;
-        top: 6px;
-        width: 33px;
-        height: 33px;
-        position: absolute;
-    }
+.index .footer .kfemail em {
+    background-position: -269px -33px;
+    left: 0px;
+    top: 6px;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+}
 
-    .index .footer .copyright {
-        padding: 20px 10px 10px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        line-height: 2;
-        font-size: 12px;
-    }
+.index .footer .copyright {
+    padding: 20px 10px 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 2;
+    font-size: 12px;
+}
 
 .page .header {
     width: 100%;
@@ -1174,20 +1175,20 @@ a.non_link {
     background-color: rgb(19, 129, 192);
 }
 
-    .page .header .top {
-        margin: 0px auto;
-        padding: 25px 0px;
-        width: 1200px;
-        height: 50px;
-        position: relative;
-        background-color: rgb(19, 129, 192);
-    }
+.page .header .top {
+    margin: 0px auto;
+    padding: 25px 0px;
+    width: 1200px;
+    height: 50px;
+    position: relative;
+    background-color: rgb(19, 129, 192);
+}
 
-    .page .header a.logo {
-        height: 50px;
-        float: left;
-        display: block;
-    }
+.page .header a.logo {
+    height: 50px;
+    float: left;
+    display: block;
+}
 
 .page .search {
     left: 50%;
@@ -1205,32 +1206,32 @@ a.non_link {
     cursor: default;
 }
 
-    .page .header .user span {
-        padding: 0px 7px;
-        float: left;
-        cursor: default;
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-    }
+.page .header .user span {
+    padding: 0px 7px;
+    float: left;
+    cursor: default;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
 
 span.span_vip {
     width: 115px;
     position: relative;
 }
 
-    span.span_vip img {
-        margin: 10px 3px 0px 0px;
-        float: left;
-    }
+span.span_vip img {
+    margin: 10px 3px 0px 0px;
+    float: left;
+}
 
-    span.span_vip .em {
-        background: url("../img/search_down.png") no-repeat 0% 0% / 100%;
-        width: 10px;
-        height: 10px;
-        right: 15px;
-        bottom: 20px;
-        position: absolute;
-    }
+span.span_vip .em {
+    background: url("../img/search_down.png") no-repeat 0% 0% / 100%;
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    bottom: 20px;
+    position: absolute;
+}
 
 .span_vip_list {
     background: rgb(20, 86, 128);
@@ -1247,12 +1248,12 @@ span.span_vip {
     height: 45px;
 }
 
-    .user span.span_vip .span_vip_list li a {
-        width: 100%;
-        height: 100%;
-        line-height: 45px;
-        display: inline-block;
-    }
+.user span.span_vip .span_vip_list li a {
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    display: inline-block;
+}
 
 .span_vip_list li:hover {
     background: rgb(126, 181, 212);
@@ -1272,21 +1273,21 @@ span.span_email {
     position: relative;
 }
 
-    span.span_email .emailtip {
-        background: red;
-        border-radius: 50%;
-        left: 2px;
-        top: 10px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-    }
+span.span_email .emailtip {
+    background: red;
+    border-radius: 50%;
+    left: 2px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
 
-    span.span_email img {
-        width: 30px;
-        height: 20px;
-        margin-top: 15px;
-    }
+span.span_email img {
+    width: 30px;
+    height: 20px;
+    margin-top: 15px;
+}
 
 .page .header .user .arrow-top {
     padding: 0px;
@@ -1301,9 +1302,9 @@ span.span_email {
     text-decoration: none;
 }
 
-    .page .header .user a:hover {
-        text-decoration: underline;
-    }
+.page .header .user a:hover {
+    text-decoration: underline;
+}
 
 .page .search_more {
     margin: 5px;
@@ -1315,66 +1316,66 @@ span.span_email {
     font-size: 20px;
 }
 
-    .page .search_more a {
-        color: rgb(24, 144, 212);
-        text-decoration: none;
-        margin-top: -13px;
-        float: right;
-    }
+.page .search_more a {
+    color: rgb(24, 144, 212);
+    text-decoration: none;
+    margin-top: -13px;
+    float: right;
+}
 
-        .page .search_more a:hover {
-            color: rgb(83, 182, 17);
-        }
+.page .search_more a:hover {
+    color: rgb(83, 182, 17);
+}
 
-    .page .search_more .avatar {
-        padding: 0px 5px;
-        border-radius: 30px;
-        border: 3px solid rgb(255, 255, 255);
-        border-image: none;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        line-height: 30px;
-        overflow: hidden;
-        font-size: 15px;
-        box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-        background-color: rgb(83, 182, 17);
-    }
+.page .search_more .avatar {
+    padding: 0px 5px;
+    border-radius: 30px;
+    border: 3px solid rgb(255, 255, 255);
+    border-image: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    overflow: hidden;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(83, 182, 17);
+}
 
 .page .main {
     margin: -15px auto 0px;
     width: 1200px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
     background-color: rgb(255, 255, 255);
 }
 
-    .page .main .side {
-        padding: 30px 0px;
-        width: 244px;
-        border-right-color: rgb(242, 242, 242);
-        border-right-width: 1px;
-        border-right-style: solid;
-        float: left;
-        -ms-zoom: 1;
-    }
+.page .main .side {
+    padding: 30px 0px;
+    width: 244px;
+    border-right-color: rgb(242, 242, 242);
+    border-right-width: 1px;
+    border-right-style: solid;
+    float: left;
+    -ms-zoom: 1;
+}
 
-    .page .main .content {
-        padding: 10px 30px;
-        width: 895px;
-        overflow: hidden;
-        float: right;
-    }
+.page .main .content {
+    padding: 10px 30px;
+    width: 895px;
+    overflow: hidden;
+    float: right;
+}
 
-    .page .main .side h2 {
-        margin: 0px;
-        padding: 0px 0px 0px 50px;
-        color: rgb(255, 144, 0);
-        font-size: 16px;
-        font-weight: normal;
-    }
+.page .main .side h2 {
+    margin: 0px;
+    padding: 0px 0px 0px 50px;
+    color: rgb(255, 144, 0);
+    font-size: 16px;
+    font-weight: normal;
+}
 
 .page .me-menu {
     padding: 10px 0px;
@@ -1382,218 +1383,218 @@ span.span_email {
     position: relative;
 }
 
-    .page .me-menu li {
-        height: 50px;
-        line-height: 50px;
-        padding-left: 90px;
-        position: relative;
-    }
+.page .me-menu li {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 90px;
+    position: relative;
+}
 
-        .page .me-menu li .del {
-            background-position: -302px 0px;
-            top: 11px;
-            width: 28px;
-            height: 28px;
-            right: 20px;
-            display: none;
-            position: absolute;
-            cursor: pointer;
-        }
+.page .me-menu li .del {
+    background-position: -302px 0px;
+    top: 11px;
+    width: 28px;
+    height: 28px;
+    right: 20px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+}
 
-        .page .me-menu li.hover {
-            background: url("../img/selected.png") no-repeat right rgb(237, 246, 250);
-        }
+.page .me-menu li.hover {
+    background: url("../img/selected.png") no-repeat right rgb(237, 246, 250);
+}
 
-            .page .me-menu li.hover .del {
-                display: block;
-            }
+.page .me-menu li.hover .del {
+    display: block;
+}
 
-    .page .me-menu .avatar {
-        border-radius: 40px;
-        border: 3px solid rgb(255, 255, 255);
-        border-image: none;
-        left: 40px;
-        top: 5px;
-        width: 34px;
-        height: 34px;
-        overflow: hidden;
-        position: absolute;
-        background-color: rgb(200, 200, 200);
-    }
+.page .me-menu .avatar {
+    border-radius: 40px;
+    border: 3px solid rgb(255, 255, 255);
+    border-image: none;
+    left: 40px;
+    top: 5px;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgb(200, 200, 200);
+}
 
-    .page .me-menu a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
+.page .me-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
 
-        .page .me-menu a:hover {
-            color: rgb(10, 124, 203);
-        }
+.page .me-menu a:hover {
+    color: rgb(10, 124, 203);
+}
 
-    .page .me-menu li.add .avatar {
-        background: url("../img/brands/avatar.png") no-repeat 0px 0px;
-    }
+.page .me-menu li.add .avatar {
+    background: url("../img/brands/avatar.png") no-repeat 0px 0px;
+}
 
-    .page .me-menu li.add a {
-        color: rgb(83, 182, 17);
-        line-height: 55px;
-        text-decoration: none;
-    }
+.page .me-menu li.add a {
+    color: rgb(83, 182, 17);
+    line-height: 55px;
+    text-decoration: none;
+}
 
-        .page .me-menu li.add a:hover {
-            opacity: 0.8;
-        }
+.page .me-menu li.add a:hover {
+    opacity: 0.8;
+}
 
 .page .menu {
     padding: 10px 0px;
 }
 
-    .page .menu li {
-        line-height: 50px;
-        padding-left: 80px;
-        position: relative;
-        max-height: 50px;
-    }
+.page .menu li {
+    line-height: 50px;
+    padding-left: 80px;
+    position: relative;
+    max-height: 50px;
+}
 
-        .page .menu li.selected {
-            background: url("../img/selected.png") no-repeat right rgb(242, 242, 242);
-            margin-right: -2px;
-        }
+.page .menu li.selected {
+    background: url("../img/selected.png") no-repeat right rgb(242, 242, 242);
+    margin-right: -2px;
+}
 
-            .page .menu li.selected a {
-                color: rgb(10, 124, 203);
-                cursor: default;
-            }
+.page .menu li.selected a {
+    color: rgb(10, 124, 203);
+    cursor: default;
+}
 
-        .page .menu li em {
-            left: 43px;
-            top: 11px;
-            width: 31px;
-            height: 29px;
-            position: absolute;
-        }
+.page .menu li em {
+    left: 43px;
+    top: 11px;
+    width: 31px;
+    height: 29px;
+    position: absolute;
+}
 
-        .page .menu li a {
-            color: rgb(62, 58, 57);
-            font-size: 15px;
-            text-decoration: none;
-        }
+.page .menu li a {
+    color: rgb(62, 58, 57);
+    font-size: 15px;
+    text-decoration: none;
+}
 
-            .page .menu li a:hover {
-                color: rgb(10, 124, 203);
-            }
+.page .menu li a:hover {
+    color: rgb(10, 124, 203);
+}
 
-        .page .menu li em.t1 {
-            background: url("../img/brands/t1.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t1 {
+    background: url("../img/brands/t1.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t2 {
-            background: url("../img/brands/t2.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t2 {
+    background: url("../img/brands/t2.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t3 {
-            background: url("../img/brands/t3.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t3 {
+    background: url("../img/brands/t3.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t4 {
-            background: url("../img/brands/t4.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t4 {
+    background: url("../img/brands/t4.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t5 {
-            background: url("../img/brands/t5.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t5 {
+    background: url("../img/brands/t5.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t6 {
-            background: url("../img/brands/t6.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t6 {
+    background: url("../img/brands/t6.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t7 {
-            background: url("../img/brands/t7.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t7 {
+    background: url("../img/brands/t7.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t8 {
-            background: url("../img/brands/t8.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t8 {
+    background: url("../img/brands/t8.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t9 {
-            background: url("../img/brands/t9.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t9 {
+    background: url("../img/brands/t9.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t10 {
-            background: url("../img/brands/t10.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t10 {
+    background: url("../img/brands/t10.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t11 {
-            background: url("../img/brands/t11.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t11 {
+    background: url("../img/brands/t11.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t12 {
-            background: url("../img/brands/t12.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t12 {
+    background: url("../img/brands/t12.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t13 {
-            background: url("../img/brands/t13.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t13 {
+    background: url("../img/brands/t13.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t14 {
-            background: url("../img/brands/t14.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t14 {
+    background: url("../img/brands/t14.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t15 {
-            background: url("../img/brands/t15.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t15 {
+    background: url("../img/brands/t15.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t16 {
-            background: url("../img/brands/t16.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t16 {
+    background: url("../img/brands/t16.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t17 {
-            background: url("../img/brands/t17.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t17 {
+    background: url("../img/brands/t17.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t18 {
-            background: url("../img/brands/t18.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t18 {
+    background: url("../img/brands/t18.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t19 {
-            background: url("../img/brands/t19.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t19 {
+    background: url("../img/brands/t19.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t20 {
-            background: url("../img/brands/t20.png") no-repeat center / 80%;
-        }
+.page .menu li em.t20 {
+    background: url("../img/brands/t20.png") no-repeat center / 80%;
+}
 
-        .page .menu li em.t21 {
-            background: url("../img/brands/t6.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t21 {
+    background: url("../img/brands/t6.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t22 {
-            background: url("../img/brands/t22.png") no-repeat 0px 0px / 90%;
-        }
+.page .menu li em.t22 {
+    background: url("../img/brands/t22.png") no-repeat 0px 0px / 90%;
+}
 
-        .page .menu li em.t23 {
-            background: url("../img/brands/t1.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t23 {
+    background: url("../img/brands/t1.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t24 {
-            background: url("../img/brands/t18.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t24 {
+    background: url("../img/brands/t18.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t25 {
-            background: url("../img/brands/t2.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t25 {
+    background: url("../img/brands/t2.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t26 {
-            background: url("../img/brands/t26.png") no-repeat 0px 0px / 95%;
-        }
+.page .menu li em.t26 {
+    background: url("../img/brands/t26.png") no-repeat 0px 0px / 95%;
+}
 
-        .page .menu li em.t27 {
-            background: url("../img/brands/t18.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t27 {
+    background: url("../img/brands/t18.png") no-repeat 0px 0px;
+}
 
-        .page .menu li em.t28 {
-            background: url("../img/brands/t2.png") no-repeat 0px 0px;
-        }
+.page .menu li em.t28 {
+    background: url("../img/brands/t2.png") no-repeat 0px 0px;
+}
 
 .ranklist .title {
     padding: 10px 0px;
@@ -1607,9 +1608,9 @@ span.span_email {
     border-bottom-style: solid;
 }
 
-    .ranklist .title h2 {
-        padding: 0px !important;
-    }
+.ranklist .title h2 {
+    padding: 0px !important;
+}
 
 .extension_form {
     padding: 0px 0px 0px 10px;
@@ -1631,17 +1632,17 @@ span.span_email {
     padding-top: 50px;
 }
 
-    .promotion_alliance input {
-        padding: 11px 10px;
-        border-radius: 4px;
-        border: 1px solid rgb(209, 209, 209);
-        border-image: none;
-        width: 350px;
-        height: 20px;
-        color: rgb(102, 102, 102);
-        font-size: 16px;
-        float: left;
-    }
+.promotion_alliance input {
+    padding: 11px 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(209, 209, 209);
+    border-image: none;
+    width: 350px;
+    height: 20px;
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+    float: left;
+}
 
 .article_url {
     padding: 11px 10px;
@@ -1747,9 +1748,9 @@ span.span_email {
     font-size: 14px !important;
 }
 
-    .intro_tg label input {
-        padding-right: 5px;
-    }
+.intro_tg label input {
+    padding-right: 5px;
+}
 
 .intro_tg td.fl {
     color: rgb(102, 102, 102);
@@ -1775,19 +1776,19 @@ span.span_email {
     display: block;
 }
 
-    .menu2 a.more {
-        border-radius: 3px;
-        border: 1px solid rgb(18, 163, 217);
-        border-image: none;
-        color: rgb(18, 163, 217);
-    }
+.menu2 a.more {
+    border-radius: 3px;
+    border: 1px solid rgb(18, 163, 217);
+    border-image: none;
+    color: rgb(18, 163, 217);
+}
 
-    .menu2 a.selected {
-        border-radius: 4px;
-        color: rgb(255, 255, 255);
-        cursor: default;
-        background-color: rgb(18, 163, 217);
-    }
+.menu2 a.selected {
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    background-color: rgb(18, 163, 217);
+}
 
 .page .content h2 {
     margin: 0px;
@@ -1797,10 +1798,10 @@ span.span_email {
     font-weight: normal;
 }
 
-    .page .content h2 em {
-        color: rgb(255, 96, 59);
-        font-style: normal;
-    }
+.page .content h2 em {
+    color: rgb(255, 96, 59);
+    font-style: normal;
+}
 
 .page .content span {
     color: rgb(111, 111, 111);
@@ -1839,130 +1840,130 @@ h3.user_name {
     border-top-style: solid;
 }
 
-    .page .result-list li {
-        padding-bottom: 10px;
-        padding-left: 85px;
-        border-bottom-color: rgb(232, 232, 232);
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        position: relative;
-        min-height: 100px;
-    }
+.page .result-list li {
+    padding-bottom: 10px;
+    padding-left: 85px;
+    border-bottom-color: rgb(232, 232, 232);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    position: relative;
+    min-height: 100px;
+}
 
-        .page .result-list li .avatar {
-            border-radius: 40px;
-            border: 3px solid rgb(255, 255, 255);
-            border-image: none;
-            left: 0px;
-            top: 23px;
-            width: 62px;
-            height: 62px;
-            overflow: hidden;
-            position: absolute;
-            box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
-            background-color: rgb(200, 200, 200);
-        }
+.page .result-list li .avatar {
+    border-radius: 40px;
+    border: 3px solid rgb(255, 255, 255);
+    border-image: none;
+    left: 0px;
+    top: 23px;
+    width: 62px;
+    height: 62px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+    background-color: rgb(200, 200, 200);
+}
 
-        .page .result-list li h3 {
-            margin: 0px;
-            padding: 0px;
-            color: rgb(0, 0, 0);
-            line-height: 50px;
-            font-size: 22px;
-            font-weight: normal;
-        }
+.page .result-list li h3 {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    line-height: 50px;
+    font-size: 22px;
+    font-weight: normal;
+}
 
-        .page .result-list li .name {
-            width: 73%;
-            color: rgb(168, 168, 168);
-            font-size: 14px;
-        }
+.page .result-list li .name {
+    width: 73%;
+    color: rgb(168, 168, 168);
+    font-size: 14px;
+}
 
-        .page .result-list li .rearticle {
-            color: rgb(0, 0, 0);
-            line-height: 40px;
-            font-size: 14px;
-        }
+.page .result-list li .rearticle {
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 14px;
+}
 
-        .page .result-list li span {
-            color: rgb(170, 170, 170);
-            padding-left: 20px;
-            font-size: 14px;
-        }
+.page .result-list li span {
+    color: rgb(170, 170, 170);
+    padding-left: 20px;
+    font-size: 14px;
+}
 
-        .page .result-list li a {
-            color: rgb(24, 144, 212);
-            text-decoration: none;
-        }
+.page .result-list li a {
+    color: rgb(24, 144, 212);
+    text-decoration: none;
+}
 
-            .page .result-list li a:hover {
-                text-decoration: underline;
-            }
+.page .result-list li a:hover {
+    text-decoration: underline;
+}
 
-        .page .result-list li .rank {
-            top: 20px;
-            height: 40px;
-            right: 220px;
-            color: rgb(0, 0, 0);
-            line-height: 40px;
-            font-size: 16px;
-            position: absolute;
-        }
+.page .result-list li .rank {
+    top: 20px;
+    height: 40px;
+    right: 220px;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 16px;
+    position: absolute;
+}
 
-            .page .result-list li .rank em {
-                color: rgb(253, 68, 44);
-                font-size: 32px;
-                font-style: normal;
-            }
+.page .result-list li .rank em {
+    color: rgb(253, 68, 44);
+    font-size: 32px;
+    font-style: normal;
+}
 
-    .page .result-list .control {
-        top: 36px;
-        width: 150px;
-        height: 42px;
-        text-align: center;
-        right: 20px;
-        line-height: 42px;
-        position: absolute;
-        z-index: 9;
-    }
+.page .result-list .control {
+    top: 36px;
+    width: 150px;
+    height: 42px;
+    text-align: center;
+    right: 20px;
+    line-height: 42px;
+    position: absolute;
+    z-index: 9;
+}
 
-        .page .result-list .control a {
-            width: 130px;
-            height: 42px;
-            color: rgb(102, 102, 102);
-            line-height: 42px;
-            text-decoration: none;
-            display: block;
-            background-color: rgb(243, 243, 243);
-        }
+.page .result-list .control a {
+    width: 130px;
+    height: 42px;
+    color: rgb(102, 102, 102);
+    line-height: 42px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(243, 243, 243);
+}
 
-            .page .result-list .control a:hover {
-                color: rgb(255, 255, 255);
-                text-decoration: none;
-                background-color: rgb(109, 180, 61);
-            }
+.page .result-list .control a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(109, 180, 61);
+}
 
-        .page .result-list .control span {
-            margin: 0px auto;
-            width: 74px;
-            height: 42px;
-            color: rgb(126, 202, 75);
-            line-height: 42px;
-            padding-left: 15px;
-            font-size: 16px;
-            display: block;
-            position: relative;
-        }
+.page .result-list .control span {
+    margin: 0px auto;
+    width: 74px;
+    height: 42px;
+    color: rgb(126, 202, 75);
+    line-height: 42px;
+    padding-left: 15px;
+    font-size: 16px;
+    display: block;
+    position: relative;
+}
 
-            .page .result-list .control span em {
-                background-position: -220px -19px;
-                left: 0px;
-                top: 12px;
-                width: 18px;
-                height: 18px;
-                display: block;
-                position: absolute;
-            }
+.page .result-list .control span em {
+    background-position: -220px -19px;
+    left: 0px;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+}
 
 .page .pagebar {
     padding: 20px 0px;
@@ -1972,47 +1973,47 @@ h3.user_name {
     overflow: hidden;
 }
 
-    .page .pagebar a {
-        padding: 10px 15px;
-        border: 1px solid rgb(236, 242, 244);
-        border-image: none;
-        text-align: center;
-        color: rgb(80, 80, 80);
-        font-size: 14px;
-        text-decoration: none;
-        margin-right: 5px;
-        display: inline-block;
-    }
+.page .pagebar a {
+    padding: 10px 15px;
+    border: 1px solid rgb(236, 242, 244);
+    border-image: none;
+    text-align: center;
+    color: rgb(80, 80, 80);
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 5px;
+    display: inline-block;
+}
 
-    .page .pagebar span {
-        padding: 10px 15px;
-        text-align: center;
-        color: rgb(80, 80, 80);
-        font-size: 14px;
-        text-decoration: none;
-        display: inline-block;
-    }
+.page .pagebar span {
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(80, 80, 80);
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
 
-    .page .pagebar a:hover {
-        border: 1px solid rgb(152, 152, 152);
-        border-image: none;
-        color: rgb(255, 255, 255);
-        background-color: rgb(152, 152, 152);
-    }
+.page .pagebar a:hover {
+    border: 1px solid rgb(152, 152, 152);
+    border-image: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(152, 152, 152);
+}
 
-    .page .pagebar a.disabled {
-        border: 1px solid rgb(236, 242, 244);
-        border-image: none;
-        color: rgb(172, 172, 172);
-        cursor: default;
-    }
+.page .pagebar a.disabled {
+    border: 1px solid rgb(236, 242, 244);
+    border-image: none;
+    color: rgb(172, 172, 172);
+    cursor: default;
+}
 
-        .page .pagebar a.disabled:hover {
-            border: 1px solid rgb(236, 242, 244);
-            border-image: none;
-            color: rgb(172, 172, 172);
-            background-color: transparent;
-        }
+.page .pagebar a.disabled:hover {
+    border: 1px solid rgb(236, 242, 244);
+    border-image: none;
+    color: rgb(172, 172, 172);
+    background-color: transparent;
+}
 
 .page .footer {
     padding: 15px 0px 10px;
@@ -2020,48 +2021,48 @@ h3.user_name {
     min-width: 1200px;
 }
 
-    .page .footer p {
-        margin: 0px;
-        padding: 10px;
-        color: rgb(103, 103, 103);
-    }
+.page .footer p {
+    margin: 0px;
+    padding: 10px;
+    color: rgb(103, 103, 103);
+}
 
-    .page .footer .contact {
-        color: rgb(140, 140, 140);
-        line-height: 50px;
-        font-size: 14px;
-    }
+.page .footer .contact {
+    color: rgb(140, 140, 140);
+    line-height: 50px;
+    font-size: 14px;
+}
 
-        .page .footer .contact span {
-            margin-left: 60px;
-            position: relative;
-        }
+.page .footer .contact span {
+    margin-left: 60px;
+    position: relative;
+}
 
-        .page .footer .contact em {
-            background: url("../img/footer-icons.png");
-            left: -40px;
-            top: -6px;
-            width: 32px;
-            height: 32px;
-            display: block;
-            position: absolute;
-        }
+.page .footer .contact em {
+    background: url("../img/footer-icons.png");
+    left: -40px;
+    top: -6px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+}
 
-        .page .footer .contact .q1 em {
-            background-position: 0px 0px;
-        }
+.page .footer .contact .q1 em {
+    background-position: 0px 0px;
+}
 
-        .page .footer .contact .q2 em {
-            background-position: -32px 0px;
-        }
+.page .footer .contact .q2 em {
+    background-position: -32px 0px;
+}
 
-        .page .footer .contact .e1 em {
-            background-position: -64px 0px;
-        }
+.page .footer .contact .e1 em {
+    background-position: -64px 0px;
+}
 
-        .page .footer .contact .e2 em {
-            background-position: -96px 0px;
-        }
+.page .footer .contact .e2 em {
+    background-position: -96px 0px;
+}
 
 .page .tl {
     padding: 15px 0px;
@@ -2070,84 +2071,84 @@ h3.user_name {
     clear: both;
 }
 
-    .page .tl table {
-        width: 100%;
-    }
+.page .tl table {
+    width: 100%;
+}
 
-    .page .tl td {
-        padding: 5px 5px 5px 15px;
-        border: 1px solid rgb(222, 242, 242);
-        border-image: none;
-        height: 36px;
-        text-align: left;
-        color: rgb(89, 89, 89);
-    }
+.page .tl td {
+    padding: 5px 5px 5px 15px;
+    border: 1px solid rgb(222, 242, 242);
+    border-image: none;
+    height: 36px;
+    text-align: left;
+    color: rgb(89, 89, 89);
+}
 
-    .page .tl th {
-        padding: 5px 5px 5px 15px;
-        border: 1px solid rgb(222, 242, 242);
-        border-image: none;
-        height: 36px;
-        text-align: left;
-        color: rgb(89, 89, 89);
-    }
+.page .tl th {
+    padding: 5px 5px 5px 15px;
+    border: 1px solid rgb(222, 242, 242);
+    border-image: none;
+    height: 36px;
+    text-align: left;
+    color: rgb(89, 89, 89);
+}
 
-    .page .tl th {
-        color: rgb(72, 115, 135);
-        vertical-align: middle;
-        white-space: nowrap;
-        position: relative;
-        background-color: rgb(248, 250, 251);
-    }
+.page .tl th {
+    color: rgb(72, 115, 135);
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    background-color: rgb(248, 250, 251);
+}
 
-        .page .tl th.down {
-            cursor: pointer;
-        }
+.page .tl th.down {
+    cursor: pointer;
+}
 
-        .page .tl th.up {
-            cursor: pointer;
-        }
+.page .tl th.up {
+    cursor: pointer;
+}
 
-        .page .tl th em {
-            margin-left: 5px;
-            vertical-align: middle;
-            display: none;
-        }
+.page .tl th em {
+    margin-left: 5px;
+    vertical-align: middle;
+    display: none;
+}
 
-        .page .tl th.down .arrow-top {
-            display: inline-block;
-        }
+.page .tl th.down .arrow-top {
+    display: inline-block;
+}
 
-        .page .tl th.up .arrow-bottom {
-            display: inline-block;
-        }
+.page .tl th.up .arrow-bottom {
+    display: inline-block;
+}
 
-        .page .tl th .arrow-top {
-            border-color: rgb(117, 143, 159) transparent transparent;
-        }
+.page .tl th .arrow-top {
+    border-color: rgb(117, 143, 159) transparent transparent;
+}
 
-        .page .tl th .arrow-bottom {
-            border-color: transparent transparent rgb(117, 143, 159);
-        }
+.page .tl th .arrow-bottom {
+    border-color: transparent transparent rgb(117, 143, 159);
+}
 
-    .page .tl td a {
-        text-align: left;
-        color: rgb(20, 121, 234);
-        text-decoration: none;
-        display: block;
-    }
+.page .tl td a {
+    text-align: left;
+    color: rgb(20, 121, 234);
+    text-decoration: none;
+    display: block;
+}
 
-        .page .tl td a:hover {
-            text-decoration: underline;
-        }
+.page .tl td a:hover {
+    text-decoration: underline;
+}
 
-    .page .tl td a {
-        color: rgb(0, 133, 191);
-    }
+.page .tl td a {
+    color: rgb(0, 133, 191);
+}
 
-    .page .tl td .t2 a {
-        color: rgb(69, 74, 80);
-    }
+.page .tl td .t2 a {
+    color: rgb(69, 74, 80);
+}
 
 .mask {
     background: rgb(0, 0, 0);
@@ -2173,7 +2174,7 @@ h3.user_name {
     display: none;
     position: fixed;
     z-index: 10001;
-    box-shadow: 0px 0px 12px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -2187,9 +2188,9 @@ h3.user_name {
     background-color: rgb(15, 187, 189);
 }
 
-    .search_more a:hover {
-        opacity: 0.9;
-    }
+.search_more a:hover {
+    opacity: 0.9;
+}
 
 .info_i {
     top: 20px;
@@ -2223,33 +2224,33 @@ h3.user_name {
     color: rgb(51, 51, 51);
     position: absolute;
     z-index: 9998;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
-    .shishu_tips .x_ficon {
-        top: 0px;
-        width: 16px;
-        right: 0px;
-        color: rgb(105, 110, 120);
-        font-size: 10px;
-        position: absolute;
-    }
+.shishu_tips .x_ficon {
+    top: 0px;
+    width: 16px;
+    right: 0px;
+    color: rgb(105, 110, 120);
+    font-size: 10px;
+    position: absolute;
+}
 
-        .shishu_tips .x_ficon:hover {
-            color: rgb(250, 125, 60);
-        }
+.shishu_tips .x_ficon:hover {
+    color: rgb(250, 125, 60);
+}
 
-    .shishu_tips ul li {
-        padding: 9px 30px 9px 13px;
-        line-height: 1em;
-        font-size: 10px;
-        white-space: nowrap;
-    }
+.shishu_tips ul li {
+    padding: 9px 30px 9px 13px;
+    line-height: 1em;
+    font-size: 10px;
+    white-space: nowrap;
+}
 
-        .shishu_tips ul li a {
-            color: rgb(10, 124, 203);
-            text-decoration: none;
-        }
+.shishu_tips ul li a {
+    color: rgb(10, 124, 203);
+    text-decoration: none;
+}
 
 .header_bg1 {
     background: url("../img/index-header-bg1.png") no-repeat center rgb(35, 24, 22);
@@ -2307,25 +2308,25 @@ h3.user_name {
     padding: 0px;
 }
 
-    .ematitle li {
-        margin: 0px;
-        padding: 0px;
-    }
+.ematitle li {
+    margin: 0px;
+    padding: 0px;
+}
 
-        .ematitle li span {
-            margin: 0px;
-            padding: 0px;
-        }
+.ematitle li span {
+    margin: 0px;
+    padding: 0px;
+}
 
 .emacontent {
     margin: 0px;
     padding: 0px;
 }
 
-    .emacontent ul {
-        margin: 0px;
-        padding: 0px;
-    }
+.emacontent ul {
+    margin: 0px;
+    padding: 0px;
+}
 
 .span_email .emaillist {
     background: white;
@@ -2341,111 +2342,111 @@ h3.user_name {
     -moz-box-shadow: 3px 3px 3px #e5e5e5;
 }
 
-    .span_email .emaillist .ematitle {
-        list-style: none;
-        padding: 3%;
-        width: 100%;
-        overflow: hidden;
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-    }
+.span_email .emaillist .ematitle {
+    list-style: none;
+    padding: 3%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
 
-        .span_email .emaillist .ematitle li {
-            padding: 2%;
-            border: 1px solid rgb(207, 207, 208);
-            border-image: none;
-            width: 27%;
-            height: 20px;
-            text-align: center;
-            color: rgb(102, 102, 102);
-            line-height: 20px;
-            font-size: 12px;
-            float: left;
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-        }
+.span_email .emaillist .ematitle li {
+    padding: 2%;
+    border: 1px solid rgb(207, 207, 208);
+    border-image: none;
+    width: 27%;
+    height: 20px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    line-height: 20px;
+    font-size: 12px;
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
 
-            .span_email .emaillist .ematitle li:nth-of-type(2) {
-                border-right-color: currentColor;
-                border-left-color: currentColor;
-                border-right-width: medium;
-                border-left-width: medium;
-                border-right-style: none;
-                border-left-style: none;
-            }
+.span_email .emaillist .ematitle li:nth-of-type(2) {
+    border-right-color: currentColor;
+    border-left-color: currentColor;
+    border-right-width: medium;
+    border-left-width: medium;
+    border-right-style: none;
+    border-left-style: none;
+}
 
-            .span_email .emaillist .ematitle li:nth-of-type(1) {
-                border-top-left-radius: 3px;
-                border-bottom-left-radius: 3px;
-            }
+.span_email .emaillist .ematitle li:nth-of-type(1) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
 
-            .span_email .emaillist .ematitle li:nth-of-type(3) {
-                border-top-right-radius: 3px;
-                border-bottom-right-radius: 3px;
-            }
+.span_email .emaillist .ematitle li:nth-of-type(3) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
 
-    .span_email .emaillist .emacontent {
-        background: rgb(249, 249, 249);
-        border-top-color: rgb(232, 232, 232);
-        border-top-width: 1px;
-        border-top-style: solid;
-    }
+.span_email .emaillist .emacontent {
+    background: rgb(249, 249, 249);
+    border-top-color: rgb(232, 232, 232);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
 
-        .span_email .emaillist .emacontent ul {
-            list-style: none;
-            margin: 10px auto 0px;
-            width: 270px;
-            height: 115px;
-        }
+.span_email .emaillist .emacontent ul {
+    list-style: none;
+    margin: 10px auto 0px;
+    width: 270px;
+    height: 115px;
+}
 
-            .span_email .emaillist .emacontent ul li {
-                height: 20px;
-                line-height: 20px;
-                overflow: hidden;
-            }
+.span_email .emaillist .emacontent ul li {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
 
-    .span_email .emaillist .ematitle li p {
-        display: inline;
-    }
+.span_email .emaillist .ematitle li p {
+    display: inline;
+}
 
-    .span_email .emaillist .emacontent ul li a {
-        width: 125px;
-        height: 20px;
-        color: rgb(102, 102, 102);
-        overflow: hidden;
-        font-size: 14px;
-        text-decoration: none;
-        float: left;
-        white-space: nowrap;
-        -ms-text-overflow: ellipsis;
-    }
+.span_email .emaillist .emacontent ul li a {
+    width: 125px;
+    height: 20px;
+    color: rgb(102, 102, 102);
+    overflow: hidden;
+    font-size: 14px;
+    text-decoration: none;
+    float: left;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+}
 
-    .span_email .emaillist .emacontent ul li span {
-        color: rgb(153, 153, 153);
-        font-size: 12px;
-        float: right;
-    }
+.span_email .emaillist .emacontent ul li span {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    float: right;
+}
 
-    .span_email .emaillist .emacontent ul li a:hover {
-        text-decoration: underline;
-    }
+.span_email .emaillist .emacontent ul li a:hover {
+    text-decoration: underline;
+}
 
-    .span_email .emaillist .emacontent ul img {
-        margin: 20px auto;
-        width: 50px;
-        height: 50px;
-    }
+.span_email .emaillist .emacontent ul img {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+}
 
-    .span_email .emaillist .emacontent ul p {
-        height: 30px;
-        text-align: center;
-        color: rgb(102, 102, 102);
-        line-height: 30px;
-    }
+.span_email .emaillist .emacontent ul p {
+    height: 30px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    line-height: 30px;
+}
 
-    .span_email .emaillist .ematitle:hover {
-        cursor: pointer;
-    }
+.span_email .emaillist .ematitle:hover {
+    cursor: pointer;
+}
 
 .click {
     background: rgb(229, 229, 229);
@@ -2463,33 +2464,33 @@ h3.user_name {
     margin-bottom: 85px;
 }
 
-    .module_mask .btn {
-        background: rgb(0, 133, 191);
-        margin: 180px auto 0px;
-        border-radius: 20px;
-        width: 130px;
-        height: 36px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        line-height: 35px;
-        font-size: 17px;
-        position: relative;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-    }
+.module_mask .btn {
+    background: rgb(0, 133, 191);
+    margin: 180px auto 0px;
+    border-radius: 20px;
+    width: 130px;
+    height: 36px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 35px;
+    font-size: 17px;
+    position: relative;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
 
-        .module_mask .btn:hover {
-            cursor: pointer;
-        }
+.module_mask .btn:hover {
+    cursor: pointer;
+}
 
-        .module_mask .btn .pointer {
-            background: url("/img/pointer.png") no-repeat 0% 0% / 100%;
-            top: 36px;
-            width: 60px;
-            height: 85px;
-            right: -40px;
-            position: absolute;
-        }
+.module_mask .btn .pointer {
+    background: url("/img/pointer.png") no-repeat 0% 0% / 100%;
+    top: 36px;
+    width: 60px;
+    height: 85px;
+    right: -40px;
+    position: absolute;
+}
 
 .body_over {
     overflow: hidden;
@@ -2506,41 +2507,41 @@ h3.user_name {
     z-index: 999;
 }
 
-    .body_mask .mask_tip {
-        background: rgb(255, 255, 255);
-        margin: 40vh auto 0px;
-        padding: 30px 25px 25px;
-        width: 415px;
-        color: rgb(0, 133, 191);
-        overflow: hidden;
-        position: relative;
-    }
+.body_mask .mask_tip {
+    background: rgb(255, 255, 255);
+    margin: 40vh auto 0px;
+    padding: 30px 25px 25px;
+    width: 415px;
+    color: rgb(0, 133, 191);
+    overflow: hidden;
+    position: relative;
+}
 
-        .body_mask .mask_tip .alt {
-            background: url("/img/alt.png") no-repeat 0% 0% / 100%;
-            width: 50px;
-            height: 50px;
-        }
+.body_mask .mask_tip .alt {
+    background: url("/img/alt.png") no-repeat 0% 0% / 100%;
+    width: 50px;
+    height: 50px;
+}
 
-        .body_mask .mask_tip .alt {
-            line-height: 25px;
-            font-size: 15px;
-            margin-right: 25px;
-            float: left;
-        }
+.body_mask .mask_tip .alt {
+    line-height: 25px;
+    font-size: 15px;
+    margin-right: 25px;
+    float: left;
+}
 
-        .body_mask .mask_tip .tip_con {
-            line-height: 25px;
-            font-size: 15px;
-            margin-right: 25px;
-            float: left;
-        }
+.body_mask .mask_tip .tip_con {
+    line-height: 25px;
+    font-size: 15px;
+    margin-right: 25px;
+    float: left;
+}
 
-        .body_mask .mask_tip .tip_con {
-            width: 315px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
+.body_mask .mask_tip .tip_con {
+    width: 315px;
+    height: 50px;
+    margin-bottom: 10px;
+}
 
 .mask_tip a {
     border-radius: 3px;
@@ -2557,17 +2558,17 @@ h3.user_name {
     -moz-border-radius: 3px;
 }
 
-    .mask_tip a:nth-of-type(1) {
-        background: rgb(19, 139, 192);
-        border: 1px solid rgb(1, 82, 130);
-        border-image: none;
-    }
+.mask_tip a:nth-of-type(1) {
+    background: rgb(19, 139, 192);
+    border: 1px solid rgb(1, 82, 130);
+    border-image: none;
+}
 
-    .mask_tip a:nth-of-type(2) {
-        background: rgb(191, 191, 191);
-        border: 1px solid rgb(160, 160, 160);
-        border-image: none;
-    }
+.mask_tip a:nth-of-type(2) {
+    background: rgb(191, 191, 191);
+    border: 1px solid rgb(160, 160, 160);
+    border-image: none;
+}
 
 .mask_tip .tip_del {
     background: url("/img/maskdelete.png") no-repeat 0% 0% / 100%;
@@ -2578,9 +2579,9 @@ h3.user_name {
     position: absolute;
 }
 
-    .mask_tip .tip_del:hover {
-        cursor: pointer;
-    }
+.mask_tip .tip_del:hover {
+    cursor: pointer;
+}
 
 .mt10 {
     margin-top: 10px;
@@ -2612,4 +2613,10 @@ h3.user_name {
     margin-top: 0px;
     margin-right: 10px;
     display: inline-block;
+}
+
+#regContainer {
+    border-top: 1px solid #ccc;
+    margin: 50px 0 0 0;
+    padding: 20px;
 }

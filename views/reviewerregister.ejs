@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta content="IE=11.0000"
+          http-equiv="X-UA-Compatible">
+
+    <meta charset="UTF-8">
+    <title>好评帮</title>
+
+    <link href="/img/favicon.ico" rel="icon" type="image/png">
+    <link href="css/pubstyle.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="css/sliderLock.css" rel="stylesheet">
+    <script src="js/jquery.191.js" ></script>
+
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="js/jquery-ui-1.10.4.min.js" ></script>
+    <script src="js/register.js" ></script>
+   
+
+    <script src="js/sliderLock.js" ></script>
+    <meta name="GENERATOR" content="MSHTML 11.00.9600.18450">
+</head>
+<body>
+    <div class="head">
+        <div class="head_content">
+            <a href="home.html">
+                <img alt="logo"
+                     src="images/logo_title.png" />
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <form id="form_id" action="/reviewerregister" method="post">
+            <div class="con_msg">
+                <div class="con_title">
+                    <img alt="注册" src="images/register.png" />
+                </div>
+                <div class="con_ipt">
+                    <div id="tip"></div>
+                    <div class="group">
+                        <strong>*</strong>                    
+                             <em></em>
+
+                       <div style=" margin-left: 55px; background: #EEEEEE; width: 288px;border:1px solid #CCCCCC;">
+                            <div id="slider" class="sliderLock ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                <p>请滑动解锁后再注册</p>
+                                <input name="_slock" value="_lock" disabled="disabled" type="hidden">
+                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"><span class="glyphicon glyphicon-arrow-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <strong>*</strong>              
+                                   <em></em>
+
+                        <input name="mobile" id="mobile" required="" type="text" maxlength="11" placeholder="请输入手机号" value="">
+                    </div>
+                    <div class="group">
+                        <strong>*</strong>                         <em></em>
+
+                        <input name="password" required="" type="password" maxlength="20" placeholder="请输入密码" value="">
+                    </div>
+                    <div class="group">
+                        <strong>*</strong>                         <em></em>
+
+                        <input name="code" class="ipt_code" type="text" maxlength="4" placeholder="验证码" value="">
+                        <a class="seccode" id="scode"
+                           href="javascript:void(0);">点击获取短信</a>
+                    </div>
+                    <div class="show-ipt" >
+                        <div class="group">
+                            <strong></strong>                             <em></em>
+                            <input name="weixinId" required="" type="text" maxlength="15" placeholder="请输入私人微信号" value="">
+                        </div>
+                        <div class="group">
+                            <strong></strong>                             <em></em>
+
+                            <input name="weixin_public" required="" type="text" maxlength="15" placeholder="请输入微信公众号" value="">
+                        </div>
+                        <div class="group">
+                            <strong></strong>                             <em></em>
+
+                            <input name="weixin_fans" required="" type="text" maxlength="15" placeholder="请输入公众号粉丝数" value="">
+                        </div>
+                    </div>
+                    <button class="login-btn" type="submit">注册</button>
+                    <span>
+                    
+                        已有微指数账号？ <a href="login">点此登录</a>
+                    </span>
+                </div>
+                <div class="con_footer">
+                    <span>
+                        我已阅读并同意 《<a href="#"
+                                    target="_blank">发展联盟服务条款</a>》 且申请加入发展联盟
+                    </span>
+                    <div class="check">
+                        <input type="checkbox">                         <img class="check_2"
+                                                                             src="images/uncheck.png" />
+                    </div>
+                    <div class="check">
+                        <input name="agr" id="agr" type="checkbox" checked="">
+                        <img class="check_1" src="images/check.png">
+                    </div><span>
+                        我已阅读并同意 <a href="#"
+                                   target="_blank">服务条款</a>
+                    </span>
+                </div>
+            </div>           
+        </form>
+    </div>
+   <% include shared/footer %>
+</body>
+</html>
