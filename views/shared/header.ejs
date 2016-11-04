@@ -12,10 +12,10 @@
     <title>好评帮</title>
 
     <link href="/img/favicon.ico" rel="icon" type="image/png">
-    <link href="css/style.css"
+    <link href="../css/style.css"
           rel="stylesheet">
-    <link href="css/jquery.popbox.css" rel="stylesheet">
-    <link href="css/monitor.css" rel="stylesheet">
+    <link href="../css/jquery.popbox.css" rel="stylesheet">
+    <link href="../css/monitor.css" rel="stylesheet">
 
 
     <meta name="GENERATOR" content="MSHTML 11.00.9600.18450">
@@ -23,21 +23,26 @@
 <body class="page">
     <div class="header">
         <div class="top">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <img alt="微指数"
-                     src="images/logo_title.png">
+                     src="../images/logo_title.png">
             </a>
 
             <div class="user">
+            
+                <% if(user){ %>
+                 <span><%=user.name%></span>
+                 <%}%>
+              
                 <span class="span_vip">
                     <a href="#" target="_blank">
-                        <img style="width: 28px;" src="images/v1.png">个人中心
+                        <img style="width: 28px;" src="../images/v1.png">个人中心
                         <div class="em"></div>
                     </a>
 
                 </span>
                 <a class="logout"
-                   href="#">退出</a>
+                   href="/logout">退出</a>
             </div><!--tip start-->
             <!--tip end-->
         </div>
