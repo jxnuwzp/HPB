@@ -159,7 +159,7 @@ module.exports = function(app) {
 
     function checkNotLogin(req, res, next) {
         if (req.session.user) {
-            return res.redirect('shop'); //back to prev page
+            return res.redirect('reviewer/shop'); //back to prev page
         }
         next();
     }
