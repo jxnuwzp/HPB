@@ -19,7 +19,13 @@ module.exports = function(app) {
 
     app.get('/reviewer/register', checkNotLogin);
     app.get('/reviewer/register', function(req, res) {
-        res.render('reviewer/register');
+
+        res.render('reviewer/register', {
+            title: '注册',
+            user: req.session.user,
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
     });
 
     app.post('/reviewer/register', checkNotLogin);
@@ -29,7 +35,8 @@ module.exports = function(app) {
             password_re = req.body['password_repeat'];
         //check password if the same
         if (password_re != password) {
-            return res.redirect('reviewer/register'); //return
+            req.flash('error', '两次输入的密码不一致!');
+            return res.redirect('register'); //return
         }
 
         var md5 = crypto.createHash('md5'),
@@ -46,16 +53,17 @@ module.exports = function(app) {
 
             //if user exist
             if (user) {
-                // req.flash('error', 'user exist');
-                return res.redirect('reviewer/register'); //back to register page
+                req.flash('error', '用户已存在!');
+                return res.redirect('register'); //back to register page
             }
             //if user not exist, insert into database
             newUser.save(function(err, user) {
                 if (err) {
-                    //   req.flash('error', err);
-                    return res.redirect('reviewer/register'); //register fail
+                    req.flash('error', err);
+                    return res.redirect('register'); //register fail
                 }
                 req.session.user = user; //save session
+                req.flash('success', '注册成功!');
                 //success! back to home page
                 res.render('reviewer/shop', {
                     user: req.session.user
@@ -67,7 +75,12 @@ module.exports = function(app) {
 
     app.get('/reviewer/login', checkNotLogin);
     app.get('/reviewer/login', function(req, res) {
-        res.render('reviewer/login');
+        res.render('reviewer/login', {
+            title: '登录',
+            user: req.session.user,
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
     });
 
     app.post('/reviewer/login', checkNotLogin);
@@ -77,14 +90,17 @@ module.exports = function(app) {
         //check whether user exist.
         User.get(req.body.username, function(err, user) {
             if (!user) {
-                return res.redirect('reviewer/login'); //user not exist!back to login page
+                req.flash('error', '用户不存在!');
+                return res.redirect('login'); //user not exist!back to login page
             }
             //check if the password is the same with database
             if (user.password != password) {
-                return res.redirect('reviewer/login'); //password error, redirect to login page
+                req.flash('error', '密码错误!');
+                return res.redirect('login'); //password error, redirect to login page
             }
             //matched!, user store to  session
             req.session.user = user;
+            req.flash('success', '登陆成功!');
             //success! back to home page
             res.render('reviewer/shop', {
                 user: req.session.user
@@ -152,6 +168,7 @@ module.exports = function(app) {
 
     function checkLogin(req, res, next) {
         if (!req.session.user) {
+            req.flash('error', '未登录!');
             return res.redirect('reviewer/login');
         }
         next();
@@ -159,6 +176,7 @@ module.exports = function(app) {
 
     function checkNotLogin(req, res, next) {
         if (req.session.user) {
+            req.flash('error', '已登录!');
             return res.redirect('reviewer/shop'); //back to prev page
         }
         next();

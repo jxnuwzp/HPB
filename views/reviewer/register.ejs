@@ -20,14 +20,20 @@
 <body class="page">
     <div class="header">
         <div class="top">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <img alt="微指数"
-                     src="images/logo_title.png">
+                     src="../images/logo_title.png">
             </a>           
             <!--tip end-->
         </div>
     </div>
 <div id="regContainer" class="text-center">
+    <% if (success) { %>
+  <div><%= success %></div>
+<% } %>
+<% if (error) { %>
+  <div><%= error %> </div>
+<% } %>
     <form method="post">
       <input type="text" name="username" required="" placeholder="请输入用户名"/><br />
           <input type="password" name="userpassword"  required="" placeholder="请输入密码"/><br />

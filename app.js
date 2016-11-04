@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -19,7 +20,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 // build mongo database connection url //
 
@@ -27,7 +28,7 @@ var dbHost = process.env.DB_HOST || 'localhost'
 var dbPort = process.env.DB_PORT || 27017;
 var dbName = process.env.DB_NAME || 'HPB';
 
-var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
+var dbURL = 'mongodb://' + dbHost + ':' + dbPort + '/' + dbName;
 
 app.use(session({
     secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',

@@ -30,6 +30,14 @@
                 <img alt="登录" src="../images/login.png" />
             </div>
             <div class="con_ipt">
+            <div style="text-align:center">
+               <% if (success) { %>
+                <div><%= success %></div>
+                <% } %>
+                <% if (error) { %>
+                <div><%= error %> </div>
+                <% } %>
+                </div>
               <form method="post">
                     <div id="tip"></div>
                     <div class="group_ipt">
