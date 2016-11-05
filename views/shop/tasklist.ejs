@@ -1,0 +1,65 @@
+
+<% include ../shared/header %>
+
+    <!--================-->
+    <div class="main">
+        <div class="side">
+            <h2>我的</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t20"></em><a href="#">我的信息</a>
+                </li>
+                <li>
+                    <em class="t23 "></em><a href="tasklist">我发布的任务</a>
+                </li>
+            </ul>
+            <h2>任务</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t7"></em><a href="upload">发布任务</a>
+                </li>
+            </ul>
+            <h2>账户</h2>
+            <ul class="menu">
+                <li>
+                    <em class="t7"></em><a href="shopcharge">充值</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+  <div class="content monitor">
+  <table class="table table-striped">
+	<caption>task list display in table</caption>
+	<thead>
+		<tr>
+			<th>Number</th>
+            <th>Shop Name</th>
+			<th>Url Path</th>
+			<th>Create time</th>
+            <th>Modify time</th>
+			<th>Creator</th>
+            <th>Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+    <% tasks.forEach(function (task, index) { %>
+		<tr>
+			<td><%= index+1%></td>
+            <td><%= task.shopname%></td>
+			<td><%= task.urlpath%></td>
+			<td><%= task.createtime%></td>
+            <td><%= task.modifytime%></td>
+            <td><%= task.creator%></td>
+            <td><%= task.comment%></td>
+		</tr>
+		<%})%>
+	</tbody>
+</table>
+
+  <% include ../shared/pager %>
+  </div>
+
+  </div>
+<% include ../shared/footer %>

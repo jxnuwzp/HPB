@@ -86,3 +86,43 @@ ShopTask.get = function(id, callback) {
         });
     });
 };
+
+ShopTask.getTasks = function(name, page, callback) {
+    //open database
+    mongodb.open(function(err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //get shoptasks collection
+        db.collection('shoptasks', function(err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
+            var query = {};
+            if (name) {
+                query.name = name;
+            }
+            //get specify record
+            collection.count(query, function(err, total) {
+                //according to query condition get (page-1)*10 records，get 10 results
+                collection.find(query, {
+                    skip: (page - 1) * 10,
+                    limit: 10
+                }).sort({
+                    time: -1
+                }).toArray(function(err, _tasks) {
+                    mongodb.close();
+                    if (err) {
+                        return callback(err);
+                    }
+                    // //解析 markdown 为 html
+                    // _tasks.forEach(function(doc) {
+                    //     doc.post = markdown.toHTML(doc.post);
+                    // });
+                    callback(null, _tasks, total);
+                });
+            });
+        });
+    });
+};

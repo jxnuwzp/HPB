@@ -113,7 +113,7 @@ module.exports = function(app) {
     app.get('/shop/upload', function(req, res) {
         res.render('shop/upload', {
             title: '商家上传任务',
-            user: req.session.user,
+            user: { "name": "testing" }, //TODO
             success: req.flash('success').toString(),
             error: req.flash('error').toString()
         });
@@ -155,7 +155,27 @@ module.exports = function(app) {
             });
         });
     });
+    app.get('/shop/tasklist', function(req, res) {
 
+        //check if it is the first page，convert to number type
+        var page = req.query.p ? parseInt(req.query.p) : 1;
+        //get the ten page taks
+        ShopTask.getTasks(null, page, function(err, tasks, total) {
+            if (err) {
+                tasks = [];
+            }
+            res.render('shop/tasklist', {
+                title: 'task list',
+                tasks: tasks,
+                page: page,
+                isFirstPage: (page - 1) == 0,
+                isLastPage: ((page - 1) * 10 + tasks.length) == total,
+                user: { "name": "testing" }, //TODO
+                success: req.flash('success').toString(),
+                error: req.flash('error').toString()
+            });
+        });
+    });
 
 
     //logout
