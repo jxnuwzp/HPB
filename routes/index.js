@@ -1,5 +1,6 @@
 var crypto = require('crypto'),
-    User = require('../models/user.js');
+    User = require('../models/user.js')
+ShopTask = require('../models/shoptask.js');
 module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render('index', { title: 'haopingbang' });
@@ -109,6 +110,55 @@ module.exports = function(app) {
 
     });
 
+    app.get('/shop/upload', function(req, res) {
+        res.render('shop/upload', {
+            title: '商家上传任务',
+            user: req.session.user,
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
+    });
+    //for shop owner upload task
+    app.post('/shop/upload', function(req, res) {
+
+        var task = new ShopTask({
+            id: 0,
+            shopname: req.body.shopname,
+            urlpath: req.body.urlpath,
+            completetime: req.body.completetime,
+            file: req.body.file,
+            comment: req.body.comment,
+            creator: req.session.user ? req.session.user.name : "", //TODO
+            modifytime: new Date(),
+            createtime: new Date()
+        });
+
+        //check if task exist
+        ShopTask.get(task.id, function(err, _task) {
+
+            //if taks exist, so do update
+            if (_task) {
+                //TODO update task
+            }
+            //if user not exist, insert into database
+            task.save(function(err, task) {
+                if (err) {
+                    req.flash('error', err);
+                    return res.redirect('upload'); //add task fail
+                }
+                req.flash('success', 'add successfully!');
+                //success! back to home page
+                res.render('shop/upload', {
+                    task: task,
+                    user: { name: "testing" } //TODO
+                });
+            });
+        });
+    });
+
+
+
+    //logout
     app.get('/logout', checkLogin);
     app.get('/logout', function(req, res) {
         req.session.user = null;
@@ -177,7 +227,7 @@ module.exports = function(app) {
     function checkNotLogin(req, res, next) {
         if (req.session.user) {
             req.flash('error', '已登录!');
-            return res.redirect('reviewer/shop'); //back to prev page
+            return res.redirect('reviewer/shop'); //back to home page
         }
         next();
     }

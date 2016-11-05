@@ -23,15 +23,15 @@ a {
     width: 100%;
 }
 
-    .head .head_content {
-        margin: auto;
-        width: 1200px;
-        height: 5vh;
-    }
+.head .head_content {
+    margin: auto;
+    width: 1200px;
+    height: 5vh;
+}
 
-        .head .head_content img {
-            height: 100%;
-        }
+.head .head_content img {
+    height: 100%;
+}
 
 .content {
     background: url("/img/bg_0.jpg") 0% 0% / cover;
@@ -46,14 +46,14 @@ a {
     text-align: center;
 }
 
-    .footer .footer_top {
-        background: rgb(28, 40, 53);
-        padding: 2.5vh 0px;
-        width: 100%;
-        color: rgb(206, 206, 206);
-        font-family: "΢���ź�";
-        font-size: 13px;
-    }
+.footer .footer_top {
+    background: rgb(28, 40, 53);
+    padding: 2.5vh 0px;
+    width: 100%;
+    color: rgb(206, 206, 206);
+    font-family: "΢���ź�";
+    font-size: 13px;
+}
 
 .footer_top a {
     color: rgb(206, 206, 206);
@@ -95,17 +95,17 @@ a {
     position: relative;
 }
 
-    .footer_top li:nth-child(6) a {
-        width: 77px;
-        height: 22px;
-        margin-top: 5px;
-        float: right;
-    }
+.footer_top li:nth-child(6) a {
+    width: 77px;
+    height: 22px;
+    margin-top: 5px;
+    float: right;
+}
 
-        .footer_top li:nth-child(6) a img {
-            width: 100%;
-            height: 100%;
-        }
+.footer_top li:nth-child(6) a img {
+    width: 100%;
+    height: 100%;
+}
 
 .footer_top ul {
     margin: auto;
@@ -162,11 +162,11 @@ a {
     height: 500px;
 }
 
-    .con_msg .con_title img {
-        width: 476px;
-        height: 48px;
-        margin-left: 150px;
-    }
+.con_msg .con_title img {
+    width: 476px;
+    height: 48px;
+    margin-left: 150px;
+}
 
 .con_ipt {
     background: rgb(251, 251, 251);
@@ -174,7 +174,7 @@ a {
     width: 795px;
     margin-top: 35px;
     min-height: 220px;
-    box-shadow: 3px -3px 10px rgba(0,0,0,0.1);
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .con_footer {
@@ -192,21 +192,21 @@ a {
     position: relative;
 }
 
-    .check input {
-        top: -100px;
-        width: 0px;
-        height: 0px;
-        position: relative;
-        z-index: -99;
-    }
+.check input {
+    top: -100px;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    z-index: -99;
+}
 
-    .check img {
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
+.check img {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
 .con_footer span {
     color: rgb(255, 255, 255);
@@ -215,9 +215,9 @@ a {
     margin-left: 45px;
 }
 
-    .con_footer span a {
-        color: rgb(0, 113, 176);
-    }
+.con_footer span a {
+    color: rgb(0, 113, 176);
+}
 
 .login-btn {
     background: rgb(1, 132, 207);
@@ -235,9 +235,9 @@ a {
     margin-left: 226px;
 }
 
-    .login-btn:hover {
-        cursor: pointer;
-    }
+.login-btn:hover {
+    cursor: pointer;
+}
 
 .con_ipt span:nth-last-of-type(1) a {
     color: rgb(0, 113, 176);
@@ -249,3 +249,4 @@ a {
     margin-left: 10px;
     display: inline-block;
 }
+
