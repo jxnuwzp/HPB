@@ -31,31 +31,43 @@
 
   <div class="content monitor">
   <table class="table table-striped">
-	<caption>task list display in table</caption>
+	 <% if(success){%>
+    <span>删除成功</span>
+    <%}%>
 	<thead>
 		<tr>
-			<th>Number</th>
-            <th>Shop Name</th>
-			<th>Url Path</th>
-			<th>Create time</th>
-            <th>Modify time</th>
-			<th>Creator</th>
-            <th>Comment</th>
+			<th>编号</th>
+            
+			<th>路径</th>
+            <th>店名</th>		
+            <th>更新时间</th>
+			<th>创建者</th>
+            <th></th>
 		</tr>
 	</thead>
 	<tbody>
     <% tasks.forEach(function (task, index) { %>
 		<tr>
-			<td><%= index+1%></td>
+			<td><%= index+1%></td>            
+			<td><a href="<%= task.urlpath%>" target="_blank"><%= task.urlpath%></a></td>
             <td><%= task.shopname%></td>
-			<td><%= task.urlpath%></td>
-			<td><%= task.createtime%></td>
+	
             <td><%= task.modifytime%></td>
             <td><%= task.creator%></td>
-            <td><%= task.comment%></td>
+            <td>
+            <label><a href="upload?id=<%= task._id%>"><strong>编辑</strong></a></label>
+            <label><a href="del?id=<%= task._id%>"><strong>删除</strong></a></label>
+            </td>
 		</tr>
 		<%})%>
-	</tbody>
+	
+    <% if(tasks.length<1){ %>
+      <tr>
+       <td colspan="7"> 无记录</td> 
+      </tr>
+	<%}%>  
+    
+</tbody>
 </table>
 
   <% include ../shared/pager %>

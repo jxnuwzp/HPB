@@ -111,18 +111,35 @@ module.exports = function(app) {
     });
 
     app.get('/shop/upload', function(req, res) {
-        res.render('shop/upload', {
-            title: '商家上传任务',
-            user: { "name": "testing" }, //TODO
-            success: req.flash('success').toString(),
-            error: req.flash('error').toString()
-        });
+
+        if (req.query.id) {
+            ShopTask.get(req.query.id, function(err, _task) {
+                //if taks exist, so do update
+                if (_task) {
+                    res.render('shop/upload', {
+                        title: '商家更新任务',
+                        task: _task,
+                        user: { "name": "testing" }, //TODO
+                        success: req.flash('success').toString(),
+                        error: req.flash('error').toString()
+                    });
+                }
+            });
+        } else {
+            res.render('shop/upload', {
+                title: '商家上传任务',
+                task: null,
+                user: { "name": "testing" }, //TODO
+                success: req.flash('success').toString(),
+                error: req.flash('error').toString()
+            });
+        }
     });
     //for shop owner upload task
     app.post('/shop/upload', function(req, res) {
 
         var task = new ShopTask({
-            id: 0,
+            id: req.body._id,
             shopname: req.body.shopname,
             urlpath: req.body.urlpath,
             completetime: req.body.completetime,
@@ -134,25 +151,37 @@ module.exports = function(app) {
         });
 
         //check if task exist
-        ShopTask.get(task.id, function(err, _task) {
+        ShopTask.get(req.query.id, function(err, _task) {
 
             //if taks exist, so do update
             if (_task) {
-                //TODO update task
-            }
-            //if user not exist, insert into database
-            task.save(function(err, task) {
-                if (err) {
-                    req.flash('error', err);
-                    return res.redirect('upload'); //add task fail
-                }
-                req.flash('success', 'add successfully!');
-                //success! back to home page
-                res.render('shop/upload', {
-                    task: task,
-                    user: { name: "testing" } //TODO
+                // update task
+                ShopTask.update(task, function(err, data) {
+                    if (err) {
+                        req.flash('error', err);
+                        return res.redirect('upload'); //add task fail
+                    }
+                    req.flash('success', 'update successfully!');
+                    res.render('shop/upload', {
+                        title: '商家更新任务',
+                        task: task,
+                        user: { "name": "testing" }, //TODO
+                        success: req.flash('success').toString(),
+                        error: req.flash('error').toString()
+                    });
                 });
-            });
+            } else {
+                //if user not exist, insert into database
+                task.save(function(err, task) {
+                    if (err) {
+                        req.flash('error', err);
+                        return res.redirect('upload'); //add task fail
+                    }
+                    req.flash('success', '添加成功');
+                    //success! back to home page
+                   return res.redirect('tasklist'); 
+                });
+            }
         });
     });
     app.get('/shop/tasklist', function(req, res) {
@@ -177,6 +206,26 @@ module.exports = function(app) {
         });
     });
 
+    //delete one record
+    app.get('/shop/del', function(req, res) {
+        //check if task exist
+        ShopTask.get(req.query.id, function(err, _task) {
+                if (err) {
+                        req.flash('error', err);
+                        return res.redirect('tasklist'); //add task fail
+                    }
+            //if taks exist, so do delete
+               ShopTask.del(req.query.id, function(err, data) {
+                    if (err) {
+                        req.flash('error', err);
+                        return res.redirect('tasklist'); 
+                    }
+                    req.flash('success', '删除成功');
+                     return res.redirect('tasklist'); 
+                       
+                });
+        });
+    });
 
     //logout
     app.get('/logout', checkLogin);

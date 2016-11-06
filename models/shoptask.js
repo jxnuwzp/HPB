@@ -1,6 +1,7 @@
 var mongodb = require('./db');
 
 function ShopTask(task) {
+    this.id = task.id;
     this.shopname = task.shopname;
     this.urlpath = task.urlpath;
     this.completetime = task.completetime;
@@ -73,10 +74,12 @@ ShopTask.get = function(id, callback) {
                 mongodb.close();
                 return callback(err);
             }
-
-            collection.findOne({
-                id: id
-            }, function(err, task) {
+            // var query = {};
+            // if (id) {
+            //     query._id = ObjectId(id);
+            // }
+            var ObjectId = require('mongodb').ObjectID;
+            collection.findOne({ "_id": ObjectId(id) }, function(err, task) {
                 mongodb.close();
                 if (err) {
                     return callback(err);
@@ -86,6 +89,7 @@ ShopTask.get = function(id, callback) {
         });
     });
 };
+
 
 ShopTask.getTasks = function(name, page, callback) {
     //open database
@@ -122,6 +126,65 @@ ShopTask.getTasks = function(name, page, callback) {
                     // });
                     callback(null, _tasks, total);
                 });
+            });
+        });
+    });
+};
+
+//update shop task
+ShopTask.update = function(data, callback) {
+
+    mongodb.open(function(err, db) {
+        if (err) {
+            return callback(err);
+        }
+
+        db.collection('shoptasks', function(err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
+            var ObjectId = require('mongodb').ObjectID;
+            collection.update({ "_id": ObjectId(data.id) }, {
+                $set: {
+                    "shopname": data.shopname,
+                    "urlpath": data.urlpath,
+                    "completetime": data.completetime,
+                    "file": data.file,
+                    "comment": data.comment,
+                    "modifytime": data.modifytime
+
+                }
+            }, { multi: true }, function(err) {
+                mongodb.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+ShopTask.del = function(id, callback)
+{
+ mongodb.open(function(err, db) {
+        if (err) {
+            return callback(err);
+        }
+
+        db.collection('shoptasks', function(err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
+            var ObjectId = require('mongodb').ObjectID;
+            collection.remove({ "_id": ObjectId(id) }, { multi: true }, function(err) {
+                mongodb.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
             });
         });
     });
