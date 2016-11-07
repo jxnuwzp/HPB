@@ -149,6 +149,7 @@ module.exports = function(app) {
             modifytime: new Date(),
             createtime: new Date()
         });
+        task.urlpath = task.urlpath.toLowerCase().indexOf("http") > -1 || task.urlpath.toLowerCase().indexOf("https") > -1 ? task.urlpath : "http://" + task.urlpath;
 
         //check if task exist
         ShopTask.get(req.query.id, function(err, _task) {
@@ -207,6 +208,29 @@ module.exports = function(app) {
         });
     });
 
+    app.get('/shop/search', function(req, res) {
+
+        //check if it is the first page，convert to number type
+        var page = req.query.p ? parseInt(req.query.p) : 1;
+        var key = req.query.key;
+        //get the ten page taks
+        ShopTask.getTasks(key, page, function(err, tasks, total) {
+            if (err) {
+                tasks = [];
+            }
+            res.render('shop/tasklist', {
+                title: 'task list',
+                tasks: tasks,
+                total: total,
+                page: page,
+                isFirstPage: (page - 1) == 0,
+                isLastPage: ((page - 1) * 15 + tasks.length) == total,
+                user: { "name": "testing" }, //TODO
+                success: req.flash('success').toString(),
+                error: req.flash('error').toString()
+            });
+        });
+    });
     //delete one record
     app.get('/shop/del', function(req, res) {
         //check if task exist

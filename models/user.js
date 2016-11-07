@@ -1,3 +1,5 @@
+"use strict";
+
 var mongodb = require('./db');
 var crypto = require('crypto');
 

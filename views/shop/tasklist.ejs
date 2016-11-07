@@ -28,8 +28,19 @@
         </div>
 
 
-
+<script type="text/javascript">
+  $(document).ready(function(){
+   $("#btnSearch").click(function()
+   {
+   if($.trim($("#keywords").val())=='') return false;
+      window.location.href="search?key="+$.trim($("#keywords").val());
+   });
+});
+</script>
   <div class="content monitor">
+
+  <input type="text" placeholder="输入店名进行搜索" id="keywords" />  <button type="button" id="btnSearch" class="btn btn-primary">搜索</button>
+  <br/>
   <table class="table table-striped">
 	 <% if(success){%>
     <span>删除成功</span>
@@ -41,6 +52,7 @@
 			<th>路径</th>
             <th>店名</th>		
             <th>更新时间</th>
+            <th>状态</th>
 			<th>创建者</th>
             <th></th>
 		</tr>
@@ -52,11 +64,25 @@
 			<td><a href="<%= task.urlpath%>" target="_blank"><%= task.urlpath%></a></td>
             <td><%= task.shopname%></td>
 	
-            <td><%= task.modifytime%></td>
+            <td><%= task.modifytime.minute%></td>
+            <td>            
+            <% if(task.status==0){%>
+             <span>未开始</span>
+            <%} else if(task.status==1){%>
+              <span>正在进行</span>
+              <%} else if(task.status==2){%>
+              <span>已完成</span>
+              <%}%>
+            </td>
             <td><%= task.creator%></td>
             <td>
+            <% if(task.status==0){%>
             <label><a href="upload?id=<%= task._id%>"><strong>编辑</strong></a></label>
             <label><a href="del?id=<%= task._id%>"><strong>删除</strong></a></label>
+            <%} else{ %>
+            <label><a disabled="disabled" style="color:#ccc" href="javascript:void(0)">编辑</a></label>
+            <label><a disabled="disabled" style="color:#ccc" href="javascript:void(0)">删除</a></label>
+             <%}%>
             </td>
 		</tr>
 		<%})%>

@@ -8,6 +8,7 @@ function ShopTask(task) {
     this.file = task.file;
     this.comment = task.comment;
     this.creator = task.creator;
+    this.status = task.status; //0:未开始 1:正在进行中 2:已完成
     this.createtime = task.createtime;
     this.modifytime = task.modifytime;
 
@@ -17,8 +18,16 @@ module.exports = ShopTask;
 
 //
 ShopTask.prototype.save = function(callback) {
-
-    //task info
+    var date = new Date();
+    var time = {
+            date: date,
+            year: date.getFullYear(),
+            month: date.getFullYear() + "-" + (date.getMonth() + 1),
+            day: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+            minute: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+                date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+        }
+        //task info
     var task = {
         id: this.id,
         shopname: this.shopname,
@@ -26,8 +35,9 @@ ShopTask.prototype.save = function(callback) {
         completetime: this.completetime,
         file: this.file,
         comment: this.comment,
-        createtime: this.createtime,
-        modifytime: this.modifytime,
+        createtime: time,
+        modifytime: time,
+        status: 0, //0:未开始
         creator: this.creator
     };
     //open data base
@@ -41,13 +51,6 @@ ShopTask.prototype.save = function(callback) {
                 mongodb.close();
                 return callback(err);
             }
-            // var ret = db.counters.findAndModify({
-            //     query: { id: task.id },
-            //     update: { $inc: { seq: 1 } },
-            //     new: true
-            // });
-            // task.id = ret.seq;
-
             collection.insert(task, {
                 safe: true
             }, function(err, task) {
@@ -105,7 +108,7 @@ ShopTask.getTasks = function(name, page, callback) {
             }
             var query = {};
             if (name) {
-                query.name = name;
+                query = { "shopname": new RegExp(name, 'i') };
             }
             //get specify record
             collection.count(query, function(err, total) {
@@ -114,7 +117,7 @@ ShopTask.getTasks = function(name, page, callback) {
                     skip: (page - 1) * 15,
                     limit: 15
                 }).sort({
-                    modifytime: -1
+                    modifytime: 1
                 }).toArray(function(err, _tasks) {
                     mongodb.close();
                     if (err) {
@@ -130,6 +133,15 @@ ShopTask.getTasks = function(name, page, callback) {
 //update shop task
 ShopTask.update = function(data, callback) {
 
+    var date = new Date();
+    var time = {
+        date: date,
+        year: date.getFullYear(),
+        month: date.getFullYear() + "-" + (date.getMonth() + 1),
+        day: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+        minute: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+            date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+    }
     mongodb.open(function(err, db) {
         if (err) {
             return callback(err);
@@ -148,7 +160,7 @@ ShopTask.update = function(data, callback) {
                     "completetime": data.completetime,
                     "file": data.file,
                     "comment": data.comment,
-                    "modifytime": data.modifytime
+                    "modifytime": time
 
                 }
             }, { multi: true }, function(err) {

@@ -37,28 +37,28 @@
      <%}%>
 
     <div class="form-group">
-        <label for="shopname">Shop Name:</label>
+        <label for="shopname">商店名字:</label>
 
         <%if(task){%>
-        <input type="text" required="" class="form-control" name="shopname" id="shopname" value=<%=task.shopname%> placeholder="please intput shop name here"/>
+        <input type="text" required="" class="form-control" name="shopname" id="shopname" value=<%=task.shopname%> placeholder="商店名字"/>
         <%} else{%>
-                <input type="text" required="" class="form-control" name="shopname" id="shopname" placeholder="please intput shop name here"/>
+                <input type="text" required="" class="form-control" name="shopname" id="shopname" placeholder="商店名字"/>
         <%}%>
     </div>
     <div class="form-group">
-        <label for="urlpath">Url Path:</label>
+        <label for="urlpath">URL路径(例如：http://www.baidu.com):</label>
          <%if(task){%>
-        <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" value=<%=task.urlpath%> placeholder="please intput url path here"/>
+        <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" value=<%=task.urlpath%> placeholder="请输入URL路径(例如：http://www.baidu.com)"/>
      <%} else{%>
-             <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" placeholder="please intput url path here"/>
+             <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" placeholder="请输入URL路径(例如：http://www.baidu.com)"/>
 <%}%>
     </div>
     <div class="form-group">
-        <label for="completetime">Complete Time:</label>
+        <label for="completetime">完成时间:</label>
          <%if(task){%>
-        <input type="text" required="" class="form-control" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="please intput complete time here"/>
+        <input type="text" required="" readonly="readonly" class="form-control" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="完成时间"/>
     <%} else{%>
-            <input type="text" required="" class="form-control" name="completetime" id="completetime" placeholder="please intput complete time here"/>
+            <input type="text" required="" readonly="readonly" class="form-control" name="completetime" id="completetime" placeholder="完成时间"/>
 <%}%>
     </div>
   
