@@ -179,7 +179,7 @@ module.exports = function(app) {
                     }
                     req.flash('success', '添加成功');
                     //success! back to home page
-                   return res.redirect('tasklist'); 
+                    return res.redirect('tasklist');
                 });
             }
         });
@@ -196,9 +196,10 @@ module.exports = function(app) {
             res.render('shop/tasklist', {
                 title: 'task list',
                 tasks: tasks,
+                total: total,
                 page: page,
                 isFirstPage: (page - 1) == 0,
-                isLastPage: ((page - 1) * 10 + tasks.length) == total,
+                isLastPage: ((page - 1) * 15 + tasks.length) == total,
                 user: { "name": "testing" }, //TODO
                 success: req.flash('success').toString(),
                 error: req.flash('error').toString()
@@ -210,20 +211,20 @@ module.exports = function(app) {
     app.get('/shop/del', function(req, res) {
         //check if task exist
         ShopTask.get(req.query.id, function(err, _task) {
-                if (err) {
-                        req.flash('error', err);
-                        return res.redirect('tasklist'); //add task fail
-                    }
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('tasklist'); //add task fail
+            }
             //if taks exist, so do delete
-               ShopTask.del(req.query.id, function(err, data) {
-                    if (err) {
-                        req.flash('error', err);
-                        return res.redirect('tasklist'); 
-                    }
-                    req.flash('success', '删除成功');
-                     return res.redirect('tasklist'); 
-                       
-                });
+            ShopTask.del(req.query.id, function(err, data) {
+                if (err) {
+                    req.flash('error', err);
+                    return res.redirect('tasklist');
+                }
+                req.flash('success', '删除成功');
+                return res.redirect('tasklist');
+
+            });
         });
     });
 

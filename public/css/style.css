@@ -1366,8 +1366,8 @@
     }
     
     .page .main .content {
-        padding: 10px 30px;
-        width: 895px;
+        padding: 10px 10px;
+        width: 950px;
         overflow: hidden;
         float: right;
     }
