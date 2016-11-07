@@ -252,6 +252,23 @@ module.exports = function(app) {
         });
     });
 
+    app.get('/shop/userinfo', function(req, res) {
+        res.render('shop/userinfo', {
+            title: '用户基本信息',
+            user: { "name": "testing" }, //TODO
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
+    });
+
+    app.get('/shop/shopcharge', function(req, res) {
+        res.render('shop/shopcharge', {
+            title: '用户充值',
+            user: { "name": "testing" }, //TODO
+            success: req.flash('success').toString(),
+            error: req.flash('error').toString()
+        });
+    });
     //logout
     app.get('/logout', checkLogin);
     app.get('/logout', function(req, res) {
@@ -285,9 +302,7 @@ module.exports = function(app) {
         res.render('shoppublishtask');
     });
 
-    app.get('/shopcharge', function(req, res) {
-        res.render('shopcharge');
-    });
+
 
 
     app.get('/reviewer', function(req, res) {

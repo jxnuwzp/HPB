@@ -1,0 +1,1289 @@
+@font-face {
+    font-family: iconfont;
+    src: url(//at.alicdn.com/t/font_1471853043_1467333.eot?#iefix) format("embedded-opentype"), url(//at.alicdn.com/t/font_1471853043_1467333.woff) format("woff"), url(//at.alicdn.com/t/font_1471853043_1467333.ttf) format("truetype"), url(//at.alicdn.com/t/font_1471853043_1467333.svg#iconfont) format("svg");
+}
+
+.col-md-2 {
+    width: 18.66%;
+}
+
+.pay {
+    padding: 40px 0px;
+    position: relative;
+}
+
+.pay h2 {
+    padding: 10px 0px 20px 60px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.pay h2 span {
+    color: rgb(255, 102, 42);
+}
+
+.detailed {
+    padding: 12px 20px 13px;
+    width: 820px;
+    height: 45px;
+    margin-left: 60px;
+    background-color: rgb(239, 250, 252);
+}
+
+.detailed .money {
+    color: rgb(0, 0, 0);
+    line-height: 45px;
+    font-size: 18px;
+    float: left;
+}
+
+.detailed .money span {
+    color: rgb(255, 102, 42);
+}
+
+.detailed a {
+    border-radius: 4px;
+    border: 1px solid rgb(230, 96, 24);
+    border-image: none;
+    width: 104px;
+    height: 43px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 43px;
+    font-size: 14px;
+    text-decoration: none;
+    float: right;
+    display: block;
+    background-color: rgb(255, 107, 27);
+}
+
+.detailed a:hover {
+    opacity: 0.9;
+}
+
+.pay h3 {
+    padding: 30px 0px 20px 60px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.pay .netbank {
+    width: 860px;
+    overflow: hidden;
+    margin-left: 60px;
+    border-top-color: rgb(210, 210, 210);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.pay .netbank h4 {
+    padding: 20px 0px 10px 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.pay .netbank p {
+    color: rgb(0, 0, 0);
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.pay .netbank p span {
+    color: rgb(255, 102, 42);
+}
+
+.pay .netbank .list {
+    padding: 20px 0px 10px 20px;
+    overflow: hidden;
+}
+
+.pay .netbank .list li {
+    margin: 0px 10px 10px 0px;
+    border: 2px solid rgb(240, 240, 240);
+    border-image: none;
+    width: 150px;
+    height: 43px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.pay .netbank .list li b {
+    background: url("../img/bank-selected.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    position: absolute;
+}
+
+.pay .netbank .list li .radio {
+    background-position: -220px -37px;
+    left: 10px;
+    top: 12px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-image: url("../img/icons-fn.png");
+}
+
+.pay .netbank .list li img {
+    margin-left: 25px;
+    display: block;
+}
+
+.pay .netbank .list li.selected {
+    border-color: rgb(255, 107, 27);
+    cursor: default;
+}
+
+.pay .netbank .list li.selected b {
+    display: block;
+}
+
+.pay .netbank .list li.selected .radio {
+    background-position: -220px -56px;
+}
+
+.pay .bank-submit {
+    border-radius: 4px;
+    border: 1px solid rgb(230, 96, 24);
+    border-image: none;
+    width: 104px;
+    height: 43px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 43px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 20px;
+    display: block;
+    background-color: rgb(255, 107, 27);
+}
+
+.pay a.bank-submit:hover {
+    opacity: 0.9;
+}
+
+.pay .service {
+    padding: 15px 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.pay .service label {
+    vertical-align: middle;
+}
+
+.pay .service input {
+    vertical-align: middle;
+}
+
+.pay .alipay .selected {
+    margin: 5px 0px 20px 20px;
+    border: 2px solid rgb(255, 107, 27);
+    border-image: none;
+    width: 150px;
+    height: 43px;
+    position: relative;
+    cursor: default;
+    background-color: rgb(255, 255, 255);
+}
+
+.pay .alipay .selected .radio {
+    background-position: -220px -56px;
+    left: 10px;
+    top: 12px;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-image: url("../img/icons-fn.png");
+}
+
+.pay .alipay .selected img {
+    margin-left: 25px;
+    display: block;
+}
+
+.pay .alipay .selected b {
+    background: url("../img/bank-selected.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.pay .alipay {
+    overflow: hidden;
+    margin-left: 60px;
+}
+
+.pay .alipay h4 {
+    padding: 20px 0px 10px 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.pay strong {
+    color: rgb(221, 0, 0);
+}
+
+.pay em {
+    color: rgb(51, 0, 0);
+    font-size: 14px;
+}
+
+.pay .normalbank {
+    width: 860px;
+    overflow: hidden;
+    margin-left: 60px;
+    border-top-color: rgb(210, 210, 210);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.pay .normalbank h4 {
+    padding: 20px 0px 10px 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.pay .normalbank .pic {
+    margin: 10px 0px 20px 20px;
+}
+
+.pay .normalbank h5 {
+    margin: 0px;
+    padding: 10px 0px 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pay .normalbank p {
+    margin: 0px;
+    padding: 0px 0px 20px 20px;
+    line-height: 1.7;
+}
+
+#pay_content {
+    width: 860px;
+    font-size: 14px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pay_div {
+    padding: 40px 0px 0px 60px;
+    width: 860px;
+}
+
+.pay_div h1 {
+    padding-bottom: 10px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.pay_div em {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.payment {
+    background: url("../img/pay_y.jpg") repeat-x left bottom rgb(239, 250, 252);
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.payment strong {
+    line-height: 80px;
+    text-indent: 30px;
+    font-size: 18px;
+}
+
+.payment button {
+    background: rgb(255, 107, 27);
+    margin: 15px 30px 0px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(232, 96, 22);
+    border-image: none;
+    width: 105px;
+    height: 45px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 38px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.payment button:disabled {
+    background: rgb(238, 238, 238);
+    border-color: rgb(204, 204, 204);
+    color: rgb(102, 102, 102);
+    cursor: not-allowed;
+}
+
+.pay_title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.net_pay dt {
+    line-height: 13px;
+}
+
+.pay_20 {
+    padding: 0px 20px;
+}
+
+.pay_div .sale {
+    padding: 0px 15px;
+    color: rgb(238, 68, 85);
+    font-size: 14px;
+}
+
+#chart table {
+    width: 100%;
+}
+
+#chart table td {
+    padding: 18px 0px;
+}
+
+#chart caption {
+    text-align: left;
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+#chart input {
+    margin-left: 10px;
+}
+
+#chart #monthly_duration {
+    margin-right: 5px;
+}
+
+#chart tr {
+    cursor: pointer;
+    background-color: rgb(239, 250, 252);
+}
+
+#chart .selector {
+    width: 40px;
+}
+
+#chart .duration {
+    width: 100px;
+}
+
+#chart .original {
+    width: 50px;
+}
+
+#chart .sale {
+    width: 60px;
+}
+
+#chart .selected {
+    background-color: rgb(110, 199, 249);
+}
+
+.pay dl {
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+.pay input {
+    display: none;
+}
+
+.pay li:hover {}
+
+.pay .selected {}
+
+.pay .alipay {
+    background-position: 0px -33px;
+}
+
+.pay li {
+    background: url("../img/alipay.png") no-repeat;
+    margin: 0px 25px 15px 0px;
+    border: 1px solid rgb(255, 255, 255);
+    border-image: none;
+    float: left;
+    cursor: pointer;
+}
+
+.pay li:hover b {
+    border-color: rgb(255, 102, 0);
+}
+
+.pay .selected b {
+    background: url("../img/bank-selected.png") no-repeat right bottom;
+    border-color: rgb(255, 102, 0);
+}
+
+.pay dd b {
+    border: 1px solid rgb(204, 204, 204);
+    border-image: none;
+    width: 130px;
+    height: 35px;
+    display: block;
+}
+
+.pay_ord {
+    margin: -15px auto 0px;
+    padding: 10px 0px 0px;
+    width: 1200px;
+    height: 500px;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 255, 255);
+}
+
+.em em {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.pay_or em {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.pay_checked em {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+}
+
+.pay_or {
+    background: url("../img/pay/order/c_Rectangular_a.png") no-repeat center;
+    width: 370px;
+    height: 120px;
+    float: left;
+}
+
+.pay_checked {
+    background: url("../img/pay/order/c_Rectangular.png") no-repeat center;
+    width: 370px;
+    height: 120px;
+    color: rgb(255, 255, 255);
+    float: left;
+}
+
+.table-tr-bg {
+    color: rgb(255, 255, 255);
+    background-color: rgb(16, 130, 195);
+}
+
+.pay_me {
+    margin: -15px auto 0px;
+    padding: 10px 0px 0px;
+    width: 1200px;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 255, 255);
+}
+
+.pay_me em {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.pay_re {
+    margin: -15px auto 0px;
+    padding: 10px 0px 0px;
+    width: 1200px;
+    height: 750px;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 255, 255);
+}
+
+.pay_re h2 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.pay_re .re_top {
+    background: url("../img/pay/recharge/image.png") no-repeat center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.re_money {
+    margin: 20px auto;
+}
+
+.pay_re .re_top .re_acc {
+    margin: 20px auto;
+}
+
+.re_text {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-right: -20px;
+}
+
+.re_mon {
+    top: -15px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.org {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.re_lo {
+    margin-top: 30px;
+}
+
+.big_font {
+    font-size: 24px;
+}
+
+.font-size-22 {
+    font-size: 22px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.no_border {
+    border-width: 0px;
+}
+
+.width-30 {
+    width: 30px;
+}
+
+.height-300 {
+    height: 300px;
+}
+
+.margin-top-42 {
+    color: rgb(255, 117, 42);
+    margin-top: 42px;
+}
+
+.margin-top-10 {
+    color: rgb(159, 160, 160);
+    margin-top: 10px;
+}
+
+.margin-right-30 {
+    margin-right: 30px;
+}
+
+.float-none {
+    float: none;
+}
+
+.top--5 {
+    top: -5px;
+    position: relative;
+}
+
+.spacing {
+    margin-bottom: 12px;
+}
+
+.pad-top-10 {
+    padding-top: 10px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-left-50 {
+    margin-left: 50px;
+}
+
+.margin-left-15 {
+    margin-left: 15px;
+}
+
+.margin-left-90 {
+    margin-left: 90px;
+}
+
+.margin-left-100 {
+    margin-left: 100px;
+}
+
+.margin-top--10 {
+    margin-top: -10px;
+}
+
+.width-1100 {
+    width: 1100px;
+}
+
+.width-240 {
+    width: 240px;
+}
+
+.top-border {
+    border-top-color: rgb(16, 130, 195);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.msg-info {
+    background: url("../img/pay/payment/sign.png") no-repeat center;
+    width: 196px;
+    height: 42px;
+    color: rgb(242, 91, 31);
+    font-size: 12px;
+    float: left;
+}
+
+.msg {
+    width: 150px;
+    margin-top: 4px;
+    margin-left: 35px;
+}
+
+.spr {
+    background: url("../img/banklogo.gif") no-repeat;
+    font-size: 0px;
+    display: inline-block;
+}
+
+.bank-list {
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.bank-list li {
+    list-style: none;
+    width: 20%;
+    float: left;
+}
+
+.bank-list .bank-item span {
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.bank-list .bank-item input {
+    vertical-align: middle;
+}
+
+.bank-list .bank-item {
+    margin: 5px;
+    border: 2px solid rgb(240, 240, 240);
+    border-image: none;
+    height: 43px;
+    line-height: 43px;
+    position: relative;
+}
+
+.bank-item input {
+    opacity: 0;
+}
+
+.bank-item label {
+    background: url("../img/bank_active.png") no-repeat -30px -25px;
+    height: 100%;
+    display: inline-block;
+}
+
+.active label {
+    background-position: -70px -66px;
+}
+
+.active .bank-item {
+    border: 2px solid rgb(255, 107, 27);
+    border-image: none;
+}
+
+.active i {
+    background: url("../img/bank_active.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+#TradeAmt {
+    width: 8em;
+}
+
+.i-icbc {
+    background-position: 0px -387px;
+    width: 107px;
+    height: 25px;
+}
+
+.i-cmb {
+    background-position: 0px -601px;
+    width: 107px;
+    height: 24px;
+}
+
+.i-ccb {
+    background-position: 0px -417px;
+    width: 107px;
+    height: 28px;
+}
+
+.i-boc {
+    background-position: 0px -506px;
+    width: 107px;
+    height: 28px;
+}
+
+.i-abc {
+    background-position: 0px -476px;
+    width: 107px;
+    height: 26px;
+}
+
+.i-bcm {
+    background-position: 0px -177px;
+    width: 107px;
+    height: 31px;
+}
+
+.i-spd {
+    background-position: 0px -237px;
+    width: 107px;
+    height: 26px;
+}
+
+.i-cgb {
+    background-position: 0px -88px;
+    width: 107px;
+    height: 25px;
+}
+
+.i-zxb {
+    background-position: 0px -664px;
+    width: 107px;
+    height: 32px;
+}
+
+.i-cyb {
+    background-position: 0px -358px;
+    width: 107px;
+    height: 28px;
+}
+
+.i-cib {
+    background-position: 0px -330px;
+    width: 107px;
+    height: 24px;
+}
+
+.i-sdb {
+    background-position: 0px -209px;
+    width: 107px;
+    height: 25px;
+}
+
+.i-cmbc {
+    background-position: 0px -448px;
+    width: 107px;
+    height: 27px;
+}
+
+.i-hxb {
+    background-position: 0px -145px;
+    width: 107px;
+    height: 31px;
+}
+
+.i-psbc {
+    background-position: 0px -537px;
+    width: 107px;
+    height: 23px;
+}
+
+.i-NBCB {
+    background-position: 0px -789px;
+    width: 110px;
+    height: 30px;
+}
+
+.i-SRCB {
+    background-position: 0px -265px;
+    width: 108px;
+    height: 26px;
+}
+
+.i-NJCB {
+    background-position: 0px -972px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-dycb {
+    background-position: 0px -55px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-shns {
+    background-position: 0px -266px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-gzyh {
+    background-position: 0px -2570px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-bhyh {
+    background-position: 0px 6px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-dlyh {
+    background-position: 0px -1567px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-hsyh {
+    background-position: 0px -113px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-jsyh {
+    background-position: 0px -1160px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-qlyh {
+    background-position: 0px -2265px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-zdyh {
+    background-position: 0px -2745px;
+    width: 95px;
+    height: 34px;
+}
+
+.i-sznsh {
+    background-position: 0px -3047px;
+    width: 115px;
+    height: 34px;
+}
+
+.i-wzyh {
+    background-position: 0px -1190px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-xmyh {
+    background-position: 0px -2120px;
+    width: 100px;
+    height: 34px;
+}
+
+.i-zsyh {
+    background-position: 0px -2400px;
+    width: 100px;
+    height: 34px;
+}
+
+.top-nav {
+    height: 72px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.top-nav .bg-h4 {
+    top: 20px;
+    width: 100%;
+    height: 4px;
+    position: relative;
+    z-index: 9;
+    background-image: -ms-linear-gradient(0deg, rgb(0, 133, 191) 37%, rgb(105, 172, 203) 59%, rgb(209, 211, 215) 66%, rgb(209, 211, 215) 83%, rgb(209, 211, 215) 100%);
+}
+
+.top-nav .num-circle-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 99;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.top-nav .num-circle-box .num-circle {
+    width: 75px;
+    height: 100%;
+    text-align: center;
+    color: rgb(0, 133, 191);
+    font-family: "microsoft yahei", Monaco, Menlo, Consolas, "Courier New", monospace;
+    margin-left: 244px;
+    float: left;
+}
+
+.top-nav .num-circle-box .num-circle .small-circle {
+    background: rgb(209, 211, 215);
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 37px;
+    font-size: 20px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.top-nav .num-circle-box .num-circle .active.small-circle {
+    background: rgb(0, 133, 191);
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+}
+
+.pay_re .fr {
+    float: right;
+}
+
+.pay_re {
+    height: 800px;
+}
+
+.pay_re .bg-f2 {
+    background: rgb(242, 242, 242);
+    width: 100%;
+    height: 44px;
+    text-align: right;
+    line-height: 44px;
+}
+
+.pay_re .bg-f2 em {
+    color: rgb(255, 106, 0);
+    padding-left: 20px;
+    font-size: 16px;
+    font-style: normal;
+    float: left;
+}
+
+.pay_re .ft16 {
+    font-size: 16px;
+}
+
+.pay_re .amount-change .price-change {
+    text-align: center;
+    line-height: 110px;
+}
+
+.pay_re .price-change .ad-price-tit {
+    padding: 0px;
+    text-align: right;
+}
+
+.pay_re .price-change span {
+    padding: 14px 38px;
+    position: relative;
+}
+
+.pay_re .price-change span em {
+    top: -5px;
+    right: -5px;
+    position: absolute;
+}
+
+.pay_re .price-change span.ad-price {
+    border: 1px solid rgb(213, 213, 213);
+    border-image: none;
+}
+
+.pay_re .price-change span.ad-price .news-tip {
+    background: url("../img/tip_bg.png") no-repeat left bottom;
+    padding: 12px 12px 21px;
+    border-radius: 6px;
+    left: 21px;
+    width: 200px;
+    text-align: left;
+    bottom: 53px;
+    color: rgb(106, 108, 108);
+    line-height: 23px;
+    display: none;
+    position: absolute;
+}
+
+.pay_re .price-change span.ad-price em {
+    background: rgb(255, 255, 255);
+    top: -13px;
+    right: -11px;
+    color: rgb(115, 115, 115);
+    line-height: 23px;
+    font-size: 23px;
+    display: inline-block;
+    position: absolute;
+    border-bottom-left-radius: 10px;
+}
+
+.pay_re .price-change span.ad-price:hover {
+    background: rgb(0, 133, 191);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.pay_re .price-change span.active.ad-price {
+    border: 1px solid rgb(0, 133, 191);
+    border-image: none;
+}
+
+.pay_re .price-change span.ad-price em.active {
+    color: red;
+}
+
+.pay_re input[type^=number] {
+    height: 46px;
+    margin-top: 33px;
+    float: left;
+}
+
+.pay_re .input-group-addon {
+    background: rgb(255, 255, 255);
+    border: 0px currentColor;
+    border-image: none;
+    width: 77px;
+    line-height: 110px;
+    float: left;
+}
+
+.pay_re .input-price {
+    opacity: 0.7;
+}
+
+.pay_re .cost-tit {
+    padding: 0px;
+    text-align: right;
+    margin-top: 39px;
+}
+
+.pay_re .mt100 {
+    margin-top: 100px;
+}
+
+.pay_re .recharge-btn {
+    background: rgb(214, 214, 214);
+    padding: 10px 51px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    cursor: not-allowed;
+}
+
+.pay_re .recharge-btn-active {
+    background: rgb(0, 133, 191);
+    padding: 10px 51px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.pay_re .recharge-btn-active:hover {
+    background: rgb(52, 177, 231);
+}
+
+.pay_me .fr {
+    float: right;
+}
+
+.pay_me .ft16 {
+    font-size: 16px;
+}
+
+.pay_me .bg-box {
+    background: rgb(242, 242, 242);
+    padding: 32px 0px;
+    margin-top: 32px;
+    position: relative;
+}
+
+.pay_me .pay_submit {
+    background: rgb(0, 133, 191);
+    padding: 5px 22px;
+    border: 0px currentColor;
+    border-image: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.pay_me .bg-box .mask {
+    background: rgb(204, 204, 204);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.pay_me .bg-box .mask-tip {
+    background: rgb(255, 255, 255);
+    padding: 36px 100px 20px;
+    border-radius: 10px;
+    left: 356px;
+    top: 69px;
+    position: absolute;
+    z-index: 999999999;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.pay_me .bg-box .mask-tip span.btn {
+    margin: 20px 24px 0px;
+    padding: 9px 33px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.pay_me .bg-box .mask-tip span.btn-confirm {
+    background: rgb(0, 133, 191);
+}
+
+.pay_me .bg-box .mask-tip span.btn-cancel {
+    background: rgb(193, 195, 197);
+}
+
+.pay_me button.pay2.pay_submit:hover {
+    background: rgb(52, 177, 231);
+}
+
+.rechargereturn {
+    margin: -15px auto 0px;
+    padding: 10px 0px 0px;
+    width: 1200px;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 255, 255);
+}
+
+.rechargereturn .top-nav .bg-h4 {
+    background: rgb(0, 133, 191);
+}
+
+.page .rechargereturn h2 {
+    margin-top: 50px;
+}
+
+.rechargereturn .bg-f2 {
+    background: rgb(242, 242, 242);
+}
+
+.rechargereturn h2 {
+    text-align: center;
+    color: rgb(104, 104, 104);
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.rechargereturn em {
+    color: rgb(255, 102, 42);
+    font-style: normal;
+}
+
+.rechargereturn .btn-torechage {
+    background: rgb(0, 133, 191);
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 0px currentColor;
+    border-image: none;
+    color: rgb(255, 255, 255);
+    line-height: 18px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rechargereturn button.btn-torechage a {
+    padding: 0px;
+    color: rgb(255, 255, 255);
+}
+
+.rechargereturn .lh34 {
+    line-height: 34px;
+}
+
+.rechargereturn .order-detail-tit {
+    text-align: center;
+    color: rgb(51, 51, 51);
+    font-size: 20px;
+    margin-top: 45px;
+    margin-bottom: 22px;
+}
+
+.rechargereturn .row a {
+    background: rgb(0, 133, 191);
+    padding: 11px 26px;
+    color: rgb(255, 255, 255);
+}
+
+.rechargereturn .btn-footer {
+    padding-bottom: 20px;
+    margin-top: 100px;
+}
+
+.rechargereturn .th_c {
+    text-align: center;
+}
+
+.rechargereturn .left-tips {
+    padding-left: 30px;
+}
+
+.rechargereturn .right-tips {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.rechargereturn .th_c a.btn:hover {
+    background: rgb(52, 177, 231);
+}

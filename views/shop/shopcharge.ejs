@@ -1,0 +1,205 @@
+
+<% include ../shared/header %>
+
+    <!--================-->
+    <div class="main">
+     
+   <% include left %>
+	<script src="../js/jquery.tips.js"></script>
+     <link href="../css/pay.css" rel="stylesheet">
+  <div class="content monitor">
+ 
+             <div class="pay_re ">
+        <h2>帐户充值</h2>
+        <div class="bg-f2"><em>当前余额：￥0</em></div>
+        <form class="recharge" action="alipaycheck?id=38256" method="post">
+            <div class="container amount-change">
+                <ul class="row price-change">
+                    <span class="col-md-1 ad-price-tit">充值金额</span>
+
+                    <li class="col-md-2">
+                        <span class="ad-price active">
+                            ￥5,000.00 <em class="iconfont active"></em>
+                            <div class="news-tip">首充赠送一单广告效果追踪</div>
+                        </span>
+                    </li>
+                    <li class="col-md-2">
+                        <span class="ad-price">
+                            ￥20,000.00 <em class="iconfont"></em>
+                            <div class="news-tip">赠送两单广告效果追踪</div>
+                        </span>
+                    </li>
+                   
+                    <input name="TradeAmt1" class="add-price" type="hidden" value="5000">
+
+                    <div class="col-md-3 input-price">
+                        <input name="TradeAmt2" class="TradeAmt" id="inputSuccess4" type="number" placeholder="充值整数金额" value="">
+
+                        <div class="input-group-addon">单位：元</div>
+                    </div>
+                </ul>
+            </div><!--        充值方式-->
+
+            <div class="bg-f2"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1 cost-tit">                    充值方式                 </div><!--                <div class="col-md-2">--> <!--                    <div class="radio">--> <!--                        <label class="re_lo">--> <!--                            <input type="radio" name="pay_type" id="checkpay" value="checkpay?id=--><!--">--> <!--                            <img src="/img/pay/recharge/bank.png" class="margin-top--10">--> <!--                        </label>--> <!--                    </div>--> <!----> <!--                </div>-->
+
+                    <div class="col-md-2">
+                        <div class="radio">
+                            <label class="re_lo">
+                                <input name="pay_type" id="checkpay"
+                                       type="radio" checked="" value="alipaycheck?id=38256">
+                                <img class="margin-top--10" src="../images/alipay.png">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 cost-tit">                    实付金额                 </div>
+                    <div class="col-md-1 cost-tit">
+                        <em class="org">
+                            ￥<span id="actCash">5000</span>.00
+                        </em>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt100">
+                        <input id="explain" type="checkbox"><label style="color: rgb(71, 71, 71);"
+                                                                   for="explain">
+                            <em style="color: red;">*</em>我同意在提现时支付总金额的3%作为“第三方支付平台”手续费
+                        </label>
+                    </div>
+                    <div class="col-md-12">
+                        <p style="color: rgb(213, 213, 213);">交易中微指数不收取额外费用，提现时第三方支付平台会收取相应手续费，请知晓！</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2" style="margin-top: 20px;"><span class="recharge-btn add-btn pay_submit">充值</span></div>
+                    </div>
+                </div>
+            </div><input name="agentbillid" id="agentbillid" type="hidden" value="147851101338256">
+            <input name="goodsname" id="goodsname" type="hidden" value="帐户充值">
+            <input name="remark" id="remark" type="hidden" value="payAccountReturn">
+            <input name="goods_note" id="goods_note" type="hidden" value="ea46payNotice">
+        </form>
+    </div>
+
+    <script>
+        $(function () {
+            //        获取焦点的时候取消透明度
+            //写这坨代码的时候脑子不是很清除~待优化
+            $('#inputSuccess4').bind({
+                focus: function () {
+                    if (this.value == this.defaultValue) {
+                        this.value = "";
+                    }
+                    $('.input-price').css('opacity', '1');
+                    //                if(this.value != ''){
+                    $('.ad-price').removeClass('active');
+                    $('.ad-price em').removeClass('active');
+                    //                }
+                    $("input[class^='add-price']").val('');
+                    document.onkeyup = keyUp;
+                },
+                blur: function () {
+                    if (this.value == "") {
+                        this.value = this.defaultValue;
+                    }
+                    $('.input-price').css('opacity', '0.7');
+                    if (this.value != '') {
+                        $('.ad-price').removeClass('active');
+                        $('.ad-price em').removeClass('active');
+                        $('.input-price').css('opacity', '1');
+                        $("input[class^='add-price']").val('');
+                        checkPrice();
+                    } else {
+                        $('.ad-price').removeClass('active');
+                        $('.ad-price em').removeClass('active');
+                        $('.ad-price').eq(0).addClass('active');
+                        $('.ad-price').eq(0).find('em').addClass('active');
+                        $("input[class^='add-price']").val('5000');
+                        $('#actCash').text('5000');
+                    }
+                }
+            });
+            //选择价格
+            $('.ad-price').click(function () {
+                $("input[id='inputSuccess4']").val('');
+                $('.ad-price').removeClass('active');
+                $('.ad-price em').removeClass('active');
+                $(this).addClass('active');
+                $(this).find('em').addClass('active');
+                var val = $(this).text().replace(/[^0-9]/ig, "") / 100;
+                $("input[class^='add-price']").val(val);
+                checkPrice();
+            });
+            //        判断说明是否被选中
+            $("input[id='explain']").click(function () {
+                if ($("input[id='explain']").is(':checked')) {
+                    $('.add-btn').removeClass('recharge-btn').addClass('recharge-btn-active');
+                } else {
+                    $('.add-btn').removeClass('recharge-btn-active').addClass('recharge-btn');
+                }
+            });
+            //鼠标移到充值价格上显示提示
+            $('.ad-price').hover(function () {
+                $(this).find('.news-tip').css('display', 'block');
+            }, function () {
+                $(this).find('.news-tip').css('display', 'none');
+            });
+
+            $('.TradeAmt').on('change propertychange input', function () {
+                checkPrice();
+            });
+
+            $('.add-btn').click(function () {
+                var money = $('[name="TradeAmt2"]').val() ? $('[name="TradeAmt2"]').val() : $('[name="TradeAmt1"]').val();
+                if ($("input[id='explain']").is(':checked')) {
+
+                } else {
+                    return false;
+                }
+                if (money > 0) {
+                    $("form.recharge").submit();
+                } else {
+                    $.tips('充值金额最少为1元');
+                    return false;
+                }
+            });
+
+
+
+        })
+        //修改价格
+        function checkPrice() {
+            var a = $("input[class^='add-price']").val();
+            var b = $("input[id='inputSuccess4']").val();
+            if (a != '') {
+                $('#actCash').text(a);
+            } else {
+                $('#actCash').text(b);
+            }
+        }
+        //监听键盘
+        function keyUp(e) {
+            var currKey = 0, e = e || event;
+            currKey = e.keyCode || e.which || e.charCode;
+            var keyName = String.fromCharCode(currKey);
+            console.log("按键码: " + currKey + " 字符: " + keyName);
+        }
+
+
+        $("#inputSuccess4").on("input", function () {
+            var regIpt = /^\+?[1-9][0-9]*$/;
+            console.log($(this).val());
+            if ($(this).val().match(regIpt) == null) {
+                $.tips('请以“元”为最小单位，调整金额后重试');
+            }
+        })
+
+
+    </script>
+        
+        </div>
+    </div>
+<% include ../shared/footer %>
