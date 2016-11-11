@@ -13,18 +13,19 @@
 
     <link href="/img/favicon.ico" rel="icon" type="image/png">
 
-    <script src="../js/jquery.191.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-    <link href="../css/jquery.popbox.css" rel="stylesheet">
-    <link href="../css/monitor.css" rel="stylesheet">
+    <script src="/js/jquery.191.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="/css/jquery.popbox.css" rel="stylesheet">
+    <link href="/css/monitor.css" rel="stylesheet">
 
-   <link href="../css/style.css" rel="stylesheet">
+   <link href="/css/style.css" rel="stylesheet">
           
     <meta name="GENERATOR" content="MSHTML 11.00.9600.18450">
 </head>
 <body class="page">
+
     <div class="header">
         <div class="top">
             <a class="logo" href="/">
@@ -45,9 +46,10 @@
                     </a>
 
                 </span>
-                <a class="logout"
-                   href="/logout">退出</a>
+                <a class="logout" href="/signout">退出</a>
+                  
             </div><!--tip start-->
             <!--tip end-->
         </div>
     </div>
+   <%- include ../components/notification %>

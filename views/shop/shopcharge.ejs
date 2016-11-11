@@ -1,10 +1,10 @@
 
-<% include ../shared/header %>
+<%- include ../shared/header %>
 
     <!--================-->
     <div class="main">
      
-   <% include left %>
+   <%- include left %>
 	<script src="../js/jquery.tips.js"></script>
      <link href="../css/pay.css" rel="stylesheet">
   <div class="content monitor">
@@ -12,7 +12,7 @@
              <div class="pay_re ">
         <h2>帐户充值</h2>
         <div class="bg-f2"><em>当前余额：￥0</em></div>
-        <form class="recharge" action="alipaycheck?id=38256" method="post">
+        <form class="recharge" action="alipaycheck?id=38256" method="Task">
             <div class="container amount-change">
                 <ul class="row price-change">
                     <span class="col-md-1 ad-price-tit">充值金额</span>
@@ -202,4 +202,4 @@
         
         </div>
     </div>
-<% include ../shared/footer %>
+<%- include ../shared/footer %>

@@ -1,27 +1,28 @@
 
-<% include ../shared/header %>
+<%- include ../shared/header %>
 
 <!--================-->
 <div class="main">
-<% include left %>
+<%- include left %>
 
 <script type="text/javascript">
   $(document).ready(function(){
    $("#btnSearch").click(function()
    {
    if($.trim($("#keywords").val())=='') return false;
-      window.location.href="search?key="+$.trim($("#keywords").val());
+      window.location.href="tasklist?key="+$.trim($("#keywords").val());
    });
 });
 </script>
   <div class="content monitor">
+
+
 <br/>
   <input type="text" placeholder="输入店名进行搜索" id="keywords" />  <button type="button" id="btnSearch" class="btn btn-primary">搜索</button>
   <br/> <br/> 
+
   <table class="table table-striped">
-	 <% if(success){%>
-    <span>删除成功</span>
-    <%}%>
+	 
 	<thead>
 		<tr>
 			<th>编号</th>
@@ -54,8 +55,8 @@
             <td><%= task.creator%></td>
             <td>
             <% if(task.status==0){%>
-            <label><a href="upload?id=<%= task._id%>"><strong>编辑</strong></a></label>
-            <label><a href="del?id=<%= task._id%>"><strong>删除</strong></a></label>
+            <label><a href="/shop/<%= task._id%>/edit"><strong>编辑</strong></a></label>
+            <label><a href="/shop/<%= task._id%>/remove"><strong>删除</strong></a></label>
             <%} else{ %>
             <label><a disabled="disabled" style="color:#ccc" href="javascript:void(0)">编辑</a></label>
             <label><a disabled="disabled" style="color:#ccc" href="javascript:void(0)">删除</a></label>
@@ -77,4 +78,4 @@
   </div>
 
   </div>
-<% include ../shared/footer %>
+<%- include ../shared/footer %>

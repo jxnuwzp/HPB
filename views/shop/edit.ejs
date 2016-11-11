@@ -1,0 +1,49 @@
+
+<%- include ../shared/header %>
+
+    <!--================-->
+    <div class="main">
+    <%- include left %>
+
+
+  <div class="content monitor">
+
+    <form role="form" method="post" action="/shop/<%=task._id%>/edit">
+
+    <div class="form-group">
+        <label for="shopname">商店名字:</label>
+
+        <input type="text" required="" class="form-control" name="shopname" id="shopname" value=<%=task.shopname%> placeholder="商店名字"/>
+        
+    </div>
+    <div class="form-group">
+        <label for="urlpath">URL路径(例如：http://www.baidu.com):</label>
+
+        <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" value=<%=task.urlpath%> placeholder="请输入URL路径(例如：http://www.baidu.com)"/>
+    
+    </div>
+    <div class="form-group">
+        <label for="completetime">完成时间:</label>
+        
+        <input type="text" required="" readonly="readonly" class="form-control" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="完成时间"/>
+   
+    </div>
+  
+
+    <div class="form-group">
+        <label for="inputfile">文件输入:</label>
+        <input type="file" name="file"  id="inputfile" />
+        <p class="help-block">help comment...</p>
+        <image src="/uploads/images.png" />
+    </div>
+    <div class="form-group">
+        <label for="inputfile">说明:</label>
+        
+        <textarea  id="comment" name="comment" rows="4" cols="50" placeholder="说明"><%=task.comment%></textarea>
+    
+    </div>
+    <button type="submit" class="btn btn-default">提交</button>
+</form>
+        </div>
+    </div>
+<%- include ../shared/footer %>
