@@ -8,6 +8,8 @@ module.exports = function(app) {
     app.use('/signin', require('./signin'));
     app.use('/signout', require('./signout'));
     app.use('/shop', require('./task'));
+    app.use('/shopmgr', require('./shopmgr'));
+
     // 404 page
     app.use(function(req, res) {
         if (!res.headersSent) {

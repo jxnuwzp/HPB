@@ -42,7 +42,7 @@
 			<td><a href="<%= task.urlpath%>" target="_blank"><%= task.urlpath%></a></td>
             <td><%= task.shopname%></td>
 	
-            <td><%= task.modifytime.minute%></td>
+            <td><%= task.modifytime%></td>
             <td>            
             <% if(task.status==0){%>
              <span>未开始</span>
@@ -52,7 +52,7 @@
               <span>已完成</span>
               <%}%>
             </td>
-            <td><%= task.creator%></td>
+            <td><%= task.creator.name%></td>
             <td>
             <% if(task.status==0){%>
             <label><a href="/shop/<%= task._id%>/edit"><strong>编辑</strong></a></label>

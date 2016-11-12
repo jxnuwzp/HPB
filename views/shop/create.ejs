@@ -5,29 +5,46 @@
     <div class="main">
     <%- include left %>
 
+  <script>
+        $(function () {
+            $('.datepicker').datepicker({
+           startDate: '-3d'
+});
+$.datepicker.formatDate( "yyyy-mm-dd", new Date() );
 
-  <div class="content monitor">
-    <form role="form" method="post" action="create">  
-
+        </script>
+ 
+  <div class=" monitor" style="padding:15px; width:500px;float:left;">
+  
+    <form role="form" method="post" action="create" enctype="multipart/form-data">  
+           
     <div class="form-group">
-        <label for="shopname">商店名字:</label>       
-        <input type="text" required="" class="form-control" name="shopname" id="shopname" placeholder="商店名字"/>
-      
+        <label for="shopname">商店名字:</label>  <br/>      
+
+        <select class="ui compact selection dropdown" name="shopname"> 
+       <option value=""></option>
+       <% shops.forEach(function (shop, index) { %>
+       <option value="<%= shop.shopname%>"><%= shop.shopname%></option>
+       <% }) %>
+       </select>
+
+ 
     </div>
+
     <div class="form-group">
-        <label for="urlpath">URL路径(例如：http://www.baidu.com):</label>
-       
-        <input type="text" required="" class="form-control" name="urlpath"  id="urlpath" placeholder="请输入URL路径(例如：http://www.baidu.com)"/>
+        <label for="urlpath">URL路径(例如：http://www.baidu.com):</label> <br/> 
+   
+        <input type="text" required="" name="urlpath"  id="urlpath" placeholder="请输入URL路径(例如：http://www.baidu.com)"/>
   </div>
     <div class="form-group">
-        <label for="completetime">完成时间:</label>     
-        <input type="text" required="" readonly="readonly" class="form-control" name="completetime" id="completetime" placeholder="完成时间"/>
+        <label for="completetime">完成时间:</label>  <br/>   
+        <input type="text" required="" data-date-format="yyyy-mm-dd" class="datepicker" name="completetime" id="completetime" placeholder="完成时间"/>
     </div>
   
 
 <div class="form-group">
     <label for="inputfile">文件输入:</label>
-    <input type="file" name="file"  id="inputfile" />
+    <input type="file" name="fileimg"  id="inputfile" />
     <p class="help-block">help comment...</p>
     <image src="../uploads/images.png" />
   </div>
@@ -40,4 +57,5 @@
     </form>        
         </div>
     </div>
+
 <%- include ../shared/footer %>

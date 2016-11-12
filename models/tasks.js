@@ -14,7 +14,18 @@ module.exports = {
             .addCreatedAt()
             .exec();
     },
+    getTaskCount: function getTaskCount(name, creator) {
+        var query = {};
+        if (name) {
+            query = { "shopname": new RegExp(name, 'i') };
+        }
+        query.creator = creator;
+        return Task
+            .find(query)
+            .populate({ path: 'creator', model: 'User' })
+            .exec();
 
+    },
     // 按创建时间降序获取所有用户task或者某个特定用户的所有task
     getTasks: function getTasks(name, creator, page) {
         var query = {};

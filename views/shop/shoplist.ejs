@@ -1,0 +1,67 @@
+
+<%- include ../shared/header %>
+
+    <!--================-->
+    <div class="main">
+     
+   <% include left %>
+
+   	<script src="/js/shopmgr.shoplist.js"></script>
+
+
+  <div class="content monitor">
+
+  <button id="btnNewShop" class="btn btn-default">新建</button>
+   <table class="table table-striped">	 
+	<thead>
+		<tr>
+			<th>编号</th>
+            <th>店名</th>		
+			<th>创建者</th>
+            <th></th>
+		</tr>
+	</thead>
+	<tbody>
+    <% shops.forEach(function (shop, index) { %>
+		<tr>
+			<td><%= index+1%></td>            
+            <td><%= shop.shopname%></td>
+	
+          
+            <td><%= shop.creator.name%></td>
+            <td>
+            <label><a href="javascript:void(0)" data-shopInfo='{"shopId":"<%= shop._id%>","shopname":"<%= shop.shopname%>"}' class="shopedit"><strong>编辑</strong></a></label>
+            <label><a href="/shopmgr/<%= shop._id%>/remove"><strong>删除</strong></a></label>            
+            </td>
+		</tr>
+		<%})%>
+	
+    <% if(shops.length<1){ %>
+      <tr>
+       <td colspan="4"> 无记录</td> 
+      </tr>
+	<%}%>  
+    
+</tbody>
+</table>
+
+  <% include ../shared/pager %>
+          
+        
+        </div>
+    </div>
+
+
+    <div id="dialog-form" style="display:none" title="新建商店">
+ 
+  <form id="fromDialog">
+    <fieldset>
+      <label for="shopname">商店名称:</label>
+      <input type="text" name="shopname" required="" id="shopname" placeholder="输入商店名称">
+    </fieldset>
+  </form>
+</div>
+
+
+<%- include ../shared/footer %>
+

@@ -4,17 +4,35 @@
     <!--================-->
     <div class="main">
     <%- include left %>
-
+  <script>
+        $(function () {
+            $('.datepicker').datepicker({
+           startDate: '-3d'
+});
+$.datepicker.formatDate( "yyyy-mm-dd", new Date());
+        });
+        </script>
 
   <div class="content monitor">
 
-    <form role="form" method="post" action="/shop/<%=task._id%>/edit">
+    <form role="form" method="post" action="/shop/<%=task._id%>/edit" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="shopname">商店名字:</label>
 
-        <input type="text" required="" class="form-control" name="shopname" id="shopname" value=<%=task.shopname%> placeholder="商店名字"/>
-        
+        <!--<input type="text" required="" class="form-control" name="shopname" id="shopname" value=<%=task.shopname%> placeholder="商店名字"/>-->
+          <select class="ui compact selection dropdown" name="shopname"> 
+       <option value=""></option>
+       <% shops.forEach(function (shop, index) { 
+           if(task.shopname==shop.shopname)
+           {%>
+                      <option selected="selected" value="<%= shop.shopname%>"><%= shop.shopname%></option>
+            <% }
+           else{%>
+           
+       <option value="<%= shop.shopname%>"><%= shop.shopname%></option>
+       <% }}) %>
+       </select>
     </div>
     <div class="form-group">
         <label for="urlpath">URL路径(例如：http://www.baidu.com):</label>
@@ -25,8 +43,7 @@
     <div class="form-group">
         <label for="completetime">完成时间:</label>
         
-        <input type="text" required="" readonly="readonly" class="form-control" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="完成时间"/>
-   
+        <input type="text" required="" data-date-format="yyyy-mm-dd" class="form-control datepicker" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="完成时间"/>
     </div>
   
 
@@ -34,7 +51,7 @@
         <label for="inputfile">文件输入:</label>
         <input type="file" name="file"  id="inputfile" />
         <p class="help-block">help comment...</p>
-        <image src="/uploads/images.png" />
+        <image src="/img/<%=task.file%>" />
     </div>
     <div class="form-group">
         <label for="inputfile">说明:</label>

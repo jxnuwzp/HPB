@@ -1,24 +1,31 @@
 var express = require('express');
+var path = require('path');
 var router = express.Router();
 
 var TaskModel = require('../models/tasks');
 var checkLogin = require('../middlewares/check').checkLogin;
-
+var UserModel = require('../models/users');
+var ShopModel = require('../models/shops');
 // GET /Tasks 所有用户或者特定用户的task页
 //   eg: GET /Tasks?creator=xxx
 router.get('/tasklist', checkLogin, function(req, res, next) {
     var key = req.query.key;
     var creator = req.session.user._id;
+    var totalCount = 0;
+    TaskModel.getTaskCount(key, creator).then(function(tasks) {
+        totalCount = tasks.length;
+    });
+
     //check if it is the first page，convert to number type
     var page = req.query.p ? parseInt(req.query.p) : 1;
     //get the ten page taks
-    TaskModel.getTasks(key,creator, page).then(function(tasks) {
+    TaskModel.getTasks(key, creator, page).then(function(tasks) {
             res.render('shop/tasklist', {
                 tasks: tasks,
-                total: tasks.length,
+                total: totalCount,
                 page: page,
                 isFirstPage: (page - 1) == 0,
-                isLastPage: ((page - 1) * 15 + tasks.length) == tasks.length,
+                isLastPage: ((page - 1) * 15 + tasks.length) == totalCount,
             });
         })
         .catch(next);
@@ -34,7 +41,13 @@ router.get('/shopcharge', checkLogin, function(req, res, next) {
 
 // GET /Tasks/create 发表task页
 router.get('/create', checkLogin, function(req, res, next) {
-    res.render('shop/create');
+    var creator = req.session.user._id;
+    ShopModel.getShopCount(null, creator).then(function(shops) {
+            res.render('shop/create', {
+                shops: shops
+            });
+        })
+        .catch(next);
 });
 
 // Task /Tasks 发表一篇task
@@ -70,7 +83,7 @@ router.post('/create', checkLogin, function(req, res, next) {
         shopname: shopname,
         urlpath: urlpath,
         completetime: time.minute,
-        file: req.fields.file,
+        file: req.files.fileimg.path.split(path.sep).pop(),
         comment: req.fields.comment,
         createtime: time.minute,
         modifytime: time.minute,
@@ -114,8 +127,13 @@ router.get('/:taskId/edit', checkLogin, function(req, res, next) {
     var taskId = req.params.taskId;
     var creator = req.session.user._id;
 
-    TaskModel.getTaskById(taskId)
-        .then(function(task) {
+    Promise.all([
+            TaskModel.getTaskById(taskId), // 获取task信息
+            ShopModel.getShopCount(null, creator)
+        ])
+        .then(function(result) {
+            var task = result[0];
+            var shops = result[1];
             if (!task) {
                 throw new Error('该task不存在');
             }
@@ -123,7 +141,8 @@ router.get('/:taskId/edit', checkLogin, function(req, res, next) {
                 throw new Error('权限不足');
             }
             res.render('shop/edit', {
-                task: task
+                task: task,
+                shops: shops
             });
         })
         .catch(next);
@@ -147,7 +166,7 @@ router.post('/:taskId/edit', checkLogin, function(req, res, next) {
         shopname: req.fields.shopname,
         urlpath: req.fields.urlpath,
         completetime: req.fields.completetime,
-        file: req.fields.file,
+        file: req.fields.file ? req.fields.file : "",
         comment: req.fields.comment,
         modifytime: time.minute,
         creator: creator
