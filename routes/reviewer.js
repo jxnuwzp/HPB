@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var checkNotLogin = require('../middlewares/check').checkNotLogin;
+var ReviewerUserInfoModel = require('../lib/mongoreviewer').UserInfo;
 
 // GET /reviewer/account management page
 // to view the reviewer's account
@@ -17,7 +18,52 @@ router.post('/account', checkNotLogin, function (req, res, next) {
 // GET /reviewer/info management page
 // to view the reviewer's user information 
 router.get('/userinfo', checkNotLogin, function (req, res, next) {
+	    //get the ten page taks
+    // TaskModel.getTasks(key,creator, page).then(function(tasks) {
+    //         res.render('shop/tasklist', {
+    //             tasks: tasks,
+    //             total: tasks.length,
+    //             page: page,
+    //             isFirstPage: (page - 1) == 0,
+    //             isLastPage: ((page - 1) * 15 + tasks.length) == tasks.length,
+    //         });
+    //     })
+    //     .catch(next);
+	
+	// var reviewerId = 666;
+	// ReviewerUserInfoModel.getReviewerInfoById(reviewerId).then(function(userInfo){
+	// 		res.render('reviewer/userinfo');
+	// 	})
+	// 	.catcy(next);
+
 	res.render('reviewer/userinfo');
+});
+
+router.post('/userinfo', checkNotLogin, function (req, res, next) {
+	var userId = 333; ///req.Session.user;
+	var dianpingUserName = req.fields.dianpingUserName;
+	
+    // create the reviewer's account into a json object
+	var reviewerUserInfo = {
+		userId: userId,
+		dianpingUserName: dianpingUserName,
+		accountType: 1
+	};
+
+	ReviewerUserInfoModel.create(reviewerUserInfo)
+		.then(function(result){
+			reviewerUserInfo = result.ops[0];
+			req.flash('success', 'add successfully!');
+			res.redirect('userinfo');
+		})
+		.catch(function(e){
+			if (e.message.match('E11000 duplicate key')) {
+				req.flash('error', 'account已被占用');
+				return res.redirect('userinfo');
+			}
+			next(e);
+		});
+	// res.render('reviewer/userinfo');
 });
 
 // GET /reviewer/completedtask page
