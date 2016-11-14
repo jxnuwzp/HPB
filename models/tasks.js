@@ -14,7 +14,7 @@ module.exports = {
             .addCreatedAt()
             .exec();
     },
-    getTaskCount: function getTaskCount(name, creator) {
+    getTaskCount: function getTaskCount(name, creator) {    
         var query = {};
         if (name) {
             query = { "shopname": new RegExp(name, 'i') };

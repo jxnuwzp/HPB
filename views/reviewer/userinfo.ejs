@@ -13,32 +13,40 @@
                             基本信息
                         </i>
                         <form method="post">
-                            大众点评用户名
-                            <input type="text" placeholder="大众点评用户名" id="dianpingUserName" name="dianpingUserName" width="10"/>  
-                            <button type="submit" id="btnSave" class="btn btn-primary">保存</button>
+                            <table width="100%" class="intro" border="0" cellpadding="0" cellspaccing="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">
+                                            大众点评用户名
+                                            <% if(dianpingUserName == null) { %>
+                                            <input type="text" placeholder="大众点评用户名" id="dianpingUserName" name="dianpingUserName"/>  
+                                            <button type="submit" id="btnSave" class="btn btn-primary">保存</button>
+                                            <%} else { %>
+                                                <%= dianpingUserName %>
+                                            <%}%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="15%">昵称:</td>
+                                        <td width="35%"><span id="user_nickname">未填写</span></td>
+                                        <td width="15%" align="center">我的微信ID:</td>
+                                        <td width="35%"><span id="user_sex">未填写</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机号:</td>
+                                        <td><span id="user_contacts">13661655472</span></td>
+                                        <td align="center">qq:</td>
+                                        <td><span id="user_birthday"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>监控大号数量:</td>
+                                        <td><span id="user_profession">4</span></td>
+                                        <td align="center">关键词数量:</td>
+                                        <td><span>0</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </form>
-                        <table width="100%" class="intro" border="0" cellpadding="0" cellspaccing="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td width="15%">昵称:</td>
-                                    <td width="35%"><span id="user_nickname">未填写</span></td>
-                                    <td width="15%" align="center">我的微信ID:</td>
-                                    <td width="35%"><span id="user_sex">未填写</span></td>
-                                </tr>
-                                <tr>
-                                    <td>手机号:</td>
-                                    <td><span id="user_contacts">13661655472</span></td>
-                                    <td align="center">qq:</td>
-                                    <td><span id="user_birthday"></span></td>
-                                </tr>
-                                <tr>
-                                    <td>监控大号数量:</td>
-                                    <td><span id="user_profession">4</span></td>
-                                    <td align="center">关键词数量:</td>
-                                    <td><span>0</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>

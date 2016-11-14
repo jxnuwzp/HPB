@@ -17,9 +17,9 @@ module.exports = {
 	// Get user account info according to userId
 	getReviewerInfoById: function getReviewerInfoById(reviewerId) {
 		return ReviewerUserInfo
-			.findOne({ _id: reviewerId })
+			.findOne({ userId: reviewerId })
 			.populate({ path: 'creator', model: 'User' })
-			.addCreatedAt()
+			// .addCreatedAt()
 			.exec();
 	},
 };
