@@ -8,50 +8,45 @@
     <div class="content monitor">
             <div class="info_detail">
                     <h3 class="user_name">个人中心</h3>
-                    <div class="in_de_right in_de_right_two">
-                                <a class="edit_info toEdit" href="javascript:void(0)">编辑资料</a>
-                                <a class="change_psw" href="javascript:void(0)">修改密码</a>
-                            </div>
-                            <br/>
                     <div class="the_basic">
                         <i>
                             基本信息
-                            
                         </i>
-                        <div class="payment">
-                            <strong>
-                                帐户余额:
-                                <span style="color: rgb(255, 102, 42);">￥0 </span>
-                            </strong>
-                            <a href="/pay/recharge">
-                                <button>申请提现</button>
-                            </a>
-                            <a class="make_money" style="display: none;" href="javascript:void(0)">
-                                申请提现
-                            </a>
-                        </div>
-                        <table width="100%" class="intro" border="0" cellpadding="0" cellspaccing="0">
-                            <tbody>
-                                <tr>
-                                    <td width="15%">昵称:</td>
-                                    <td width="35%"><span id="user_nickname">未填写</span></td>
-                                    <td width="15%" align="center">我的微信ID:</td>
-                                    <td width="35%"><span id="user_sex">未填写</span></td>
-                                </tr>
-                                <tr>
-                                    <td>手机号:</td>
-                                    <td><span id="user_contacts">13661655472</span></td>
-                                    <td align="center">qq:</td>
-                                    <td><span id="user_birthday"></span></td>
-                                </tr>
-                                <tr>
-                                    <td>监控大号数量:</td>
-                                    <td><span id="user_profession">4</span></td>
-                                    <td align="center">关键词数量:</td>
-                                    <td><span>0</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <form method="post">
+                            <table width="100%" class="intro" border="0" cellpadding="0" cellspaccing="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4">
+                                            大众点评用户名
+                                            <% if(dianpingUserName == null) { %>
+                                            <input type="text" placeholder="大众点评用户名" id="dianpingUserName" name="dianpingUserName"/>  
+                                            <button type="submit" id="btnSave" class="btn btn-primary">保存</button>
+                                            <%} else { %>
+                                                <%= dianpingUserName %>
+                                            <%}%>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="15%">昵称:</td>
+                                        <td width="35%"><span id="user_nickname">未填写</span></td>
+                                        <td width="15%" align="center">我的微信ID:</td>
+                                        <td width="35%"><span id="user_sex">未填写</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机号:</td>
+                                        <td><span id="user_contacts">13661655472</span></td>
+                                        <td align="center">qq:</td>
+                                        <td><span id="user_birthday"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>监控大号数量:</td>
+                                        <td><span id="user_profession">4</span></td>
+                                        <td align="center">关键词数量:</td>
+                                        <td><span>0</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
                     </div>
                 </div>
             </div>
