@@ -1,11 +1,13 @@
 var express = require('express');
 var path = require('path');
 var router = express.Router();
+var formidable = require('formidable');
 
 var TaskModel = require('../models/tasks');
 var checkLogin = require('../middlewares/check').checkLogin;
 var UserModel = require('../models/users');
 var ShopModel = require('../models/shops');
+var fs = require('fs');
 // GET /Tasks 所有用户或者特定用户的task页
 //   eg: GET /Tasks?creator=xxx
 router.get('/tasklist', checkLogin, function(req, res, next) {
@@ -83,7 +85,8 @@ router.post('/create', checkLogin, function(req, res, next) {
         shopname: shopname,
         urlpath: urlpath,
         completetime: time.minute,
-        file: req.files.fileimg.path.split(path.sep).pop(),
+        tempfile: req.files.uploadimgs ? req.files.uploadimgs.path.split(path.sep).pop() : "",
+        filename: req.files.uploadimgs ? req.files.uploadimgs.name : "",
         comment: req.fields.comment,
         createtime: time.minute,
         modifytime: time.minute,
@@ -166,7 +169,9 @@ router.post('/:taskId/edit', checkLogin, function(req, res, next) {
         shopname: req.fields.shopname,
         urlpath: req.fields.urlpath,
         completetime: req.fields.completetime,
-        file: req.fields.file ? req.fields.file : "",
+        tempfile: req.files.uploadimgs ? req.files.uploadimgs.path.split(path.sep).pop() : "",
+        filename: req.files.uploadimgs ? req.files.uploadimgs.name : "",
+
         comment: req.fields.comment,
         modifytime: time.minute,
         creator: creator
@@ -194,4 +199,37 @@ router.get('/:taskId/remove', checkLogin, function(req, res, next) {
         })
         .catch(next);
 });
+
+router.post('/upload', checkLogin, function(req, res, next) {
+
+    // create an incoming form object
+    var form = new formidable.IncomingForm();
+
+    // specify that we want to allow the user to upload multiple files in a single request
+    form.multiples = true;
+
+    // store all uploads in the /uploads directory
+    form.uploadDir = path.join(__dirname, '/img');
+
+    // every time a file has been uploaded successfully,
+    // rename it to it's orignal name
+    form.on('file', function(field, file) {
+        fs.rename(file.path, path.join(form.uploadDir, file.name));
+    });
+
+    // log any errors that occur
+    form.on('error', function(err) {
+        console.log('An error has occured: \n' + err);
+    });
+
+    // once all the files have been uploaded, send a response to the client
+    form.on('end', function() {
+        res.end('success');
+    });
+
+    // parse the incoming request containing the form data
+    form.parse(req);
+
+});
+
 module.exports = router;

@@ -12,9 +12,10 @@
 $.datepicker.formatDate( "yyyy-mm-dd", new Date());
         });
         </script>
-
+	<script src="/js/shopmgr.upload.js"></script>
+     <link href="/css/uploadstyles.css" rel="stylesheet">
   <div class="content monitor">
-
+   <%- include ../components/notification %>
     <form role="form" method="post" action="/shop/<%=task._id%>/edit" enctype="multipart/form-data">
 
     <div class="form-group">
@@ -46,19 +47,46 @@ $.datepicker.formatDate( "yyyy-mm-dd", new Date());
         <input type="text" required="" data-date-format="yyyy-mm-dd" class="form-control datepicker" name="completetime" id="completetime" value=<%=task.completetime%> placeholder="完成时间"/>
     </div>
   
-
-    <div class="form-group">
-        <label for="inputfile">文件输入:</label>
-        <input type="file" name="file"  id="inputfile" />
-        <p class="help-block">help comment...</p>
-        <image src="/img/<%=task.file%>" />
-    </div>
-    <div class="form-group">
+      <div class="form-group">
         <label for="inputfile">说明:</label>
         
         <textarea  id="comment" name="comment" rows="4" cols="50" placeholder="说明"><%=task.comment%></textarea>
     
     </div>
+
+    <div class="form-group">
+        <label for="inputfile">上传图片:</label>
+           <br/><br/>
+            <button class="btn btn-lg upload-btn" type="button">上传图片</button>
+
+              <div class="progress-bar" role="progressbar"></div>
+      
+      
+
+  <input id="upload-input" type="file" name="uploadimgs" multiple="multiple"></br>
+
+    </div>
+
+<%if(task&&task.tempfile){%>
+<div class="row">
+ 
+	<div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="/img/<%=task.tempfile%>"
+                 alt="通用的占位符缩略图">
+            <div class="caption">
+                <p><%=task.filename%></p><br/>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">
+                        删除
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<%}%>
+
     <button type="submit" class="btn btn-default">提交</button>
 </form>
         </div>
